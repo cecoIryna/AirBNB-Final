@@ -1,0 +1,13 @@
+*{margin: 0; padding: 0; box-sizing: border-box; transition: all 0.3s ease-in-out;}
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/*общие настройки*/
+body 
+{
+	font-family: "Nunito Sans", sans-serif;
+}
+
+
+/*main page*/
+
+/*house page*/
