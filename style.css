@@ -31,7 +31,7 @@ body
 	width: 90%;
 	display: flex;
 	justify-content: space-between;
-	margin: auto;
+	margin: 0 auto 2em auto;
 }
 #index menu
 {
@@ -60,8 +60,33 @@ body
 	border-radius: 26px;
 }
 #index menu .box:nth-child(2) img{margin: 0 0.5em;}
-
-
-
-
+#index .box1
+{
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	padding: 0.5em 0.5em 0.5em 2.5em;
+	border: 1px solid #211E1A;
+	border-radius: 26px;
+}
+#index .info
+{
+	margin-right: 2em;
+}
+#index .box2
+{
+	padding: 0.5em 2.5em 0 2.5em;
+	background: #6F6558;
+	border: 1px solid #6F6558;
+	border-radius: 26px;
+	color: white;
+	text-align: center;
+}
+#index .box2:hover
+{
+	background: #8A8278;
+	border: 1px solid #8A8278;
+}
+#index  p{line-height: 1.3em;}
+#index  p span{color: #8A8278;}
 /*house page*/
