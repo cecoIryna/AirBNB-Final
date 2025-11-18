@@ -19,7 +19,47 @@ body
 }
 
 /*main page*/
-
+#index
+{
+	width: 100%;
+	height: auto;
+	background: #DDDBD7;
+	padding: 4em 0;
+}
+#index .wrapper
+{
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+}
+#index menu
+{
+	display: flex;
+	justify-content: space-between;
+}
+#index nav{margin-left: 15em;}
+#index nav a
+{
+	padding: 2px 0;
+	margin: 0 1em;
+	text-decoration: none;
+	color: #211E1A;
+	border-bottom: 2px solid #DDDBD7;
+}
+#index nav a:hover
+{
+	border-bottom: 2px solid #211E1A;
+}
+#index menu a{color: #211E1A;}
+#index menu .box{margin: 0 2em;}
+#index menu .box:nth-child(2)
+{
+	padding: 2px 8px 0 8px;
+	border: 1px solid #211E1A;
+	border-radius: 26px;
+}
+#index menu .box:nth-child(2) img{margin: 0 0.5em;}
 
 
 
