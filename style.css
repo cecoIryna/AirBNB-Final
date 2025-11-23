@@ -1,4 +1,6 @@
 *{margin: 0; padding: 0; box-sizing: border-box; transition: all 0.3s ease-in-out;}
+
+/*общие настройки*/
 @font-face 
 {
   font-family: "Inknut Antiqua Medium";
@@ -10,7 +12,6 @@
   src: url("fonts/NunitoSans.ttf") format("woff2");
   font-weight: 400;
 }
-/*общие настройки*/
 body 
 {
 	font-family: "Inknut Antiqua Medium", "Nunito Sans Normal ExtraLight", sans-serif;
@@ -89,4 +90,94 @@ body
 }
 #index  p{line-height: 1.3em;}
 #index  p span{color: #8A8278;}
+
+
 /*house page*/
+#house
+{
+	width: 100%;
+	padding: 4em 0;
+}
+
+#house nav
+{
+	width: 75%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto 2em;
+}
+
+#house .logo  a img 
+{
+	width: 120px;
+}
+
+#house .left 
+{
+	width: 70%;
+	display: flex;
+	gap: 68px;
+}
+
+#house .center
+{
+	display: flex;
+	gap: 38px;
+	align-items: center;
+}
+
+#house .find 
+{
+	width: 303px;
+	padding: 4px 5px 4px 28px;
+	display: flex;
+	justify-content: space-between;
+	border: solid 1px #2C2823;
+	border-radius: 28px;
+}
+
+#house .find button
+{
+	width: 39px;
+	height: 39px;
+	background: #6F6558;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+}
+
+#house .find button img
+{
+	width: 21px;
+}
+
+#house a
+{
+	color: #211E1A;
+}
+
+#house .menu
+{
+	width: 87px;
+	padding: 4px 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: solid 1px #2C2823;
+	border-radius: 26px;
+}
+
+#house .menu a
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#house .menu a .profile 
+{
+	width: 21px;
+}
+
