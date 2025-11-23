@@ -96,7 +96,7 @@ body
 #house
 {
 	width: 100%;
-	padding: 4em 0;
+	padding: 4em 0 0;
 }
 
 #house nav
@@ -105,7 +105,7 @@ body
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 auto 2em;
+	margin: 0 auto;
 }
 
 #house .logo  a img 
@@ -115,9 +115,9 @@ body
 
 #house .left 
 {
-	width: 70%;
+	width: 57%;
 	display: flex;
-	gap: 68px;
+	justify-content: space-between;
 }
 
 #house .center
@@ -181,3 +181,68 @@ body
 	width: 21px;
 }
 
+#m_house
+{
+	width: 100%;
+}
+
+#m_house .title
+{
+	width: 75%;
+	margin: 1.5em auto;
+}
+
+#m_house h1
+{
+	font-size: 20px;
+}
+
+#m_house .under_title
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#m_house .under_title .rating 
+{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+#m_house .under_title .rating-value 
+{
+	display: flex;
+	gap: 4px;
+	justify-content: center;
+	align-items: center;
+}
+
+#m_house .under_title .rating-value img 
+{
+	margin-top: 4px;
+}
+
+#m_house .under_title .actions 
+{
+	display: flex;
+	gap: 30px;
+	align-items: center;
+}
+
+#m_house .under_title .actions button
+{
+	border: none;
+	background: none;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+#m_house .under_title .actions a
+{
+	color: #211E1A;
+	font-size: 12px;
+	font-weight: 500;
+}
