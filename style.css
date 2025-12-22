@@ -193,12 +193,12 @@ body
 #m_house .title
 {
 	width: 75%;
-	margin: 1.5em auto 1em;
+	margin: 1.5em auto;
 }
 
 #m_house h1
 {
-	font-size: 20px;
+	font-size: 25px;
 }
 
 #m_house .under_title
@@ -206,6 +206,7 @@ body
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	line-height: 20px;
 }
 
 #m_house .under_title .rating 
@@ -249,4 +250,41 @@ body
 	color: #211E1A;
 	font-size: 12px;
 	font-weight: 500;
+}
+
+.photo_gallery {
+	width: 75%;
+  display: grid;
+  grid-template-columns: repeat(4, 272px);
+  grid-template-rows: repeat(2, 274px);
+  margin: 0 auto;
+  gap: 8px;
+}
+    
+.photo1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  background-image: url("img/flat_studio_photo1.svg");
+}
+
+.photo2 {
+  grid-column-start: 3;
+  background-image: url("img/flat_studio_photo2.svg");
+}
+
+.photo3 {
+  grid-column-start: 4;
+  background-image: url("img/flat_studio_photo3.svg");
+}
+
+.photo4 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  background-image: url("img/flat_studio_photo4.svg");
+}
+
+.photo5 {
+  grid-column-start: 4;
+  grid-row-start: 2;
+  background-image: url("img/flat_studio_photo5.svg");
 }
