@@ -92,6 +92,10 @@ body
 #index  p span{color: #8A8278;}
 
 
+
+
+
+
 /*house page*/
 #house
 {
@@ -189,7 +193,7 @@ body
 #m_house .title
 {
 	width: 75%;
-	margin: 1.5em auto;
+	margin: 1.5em auto 1em;
 }
 
 #m_house h1
