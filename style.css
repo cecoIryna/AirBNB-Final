@@ -93,14 +93,6 @@ body
 #index .info:nth-child(1){padding: 0 15em 0 1em; border: 1px solid #DDDBD7;}
 #index .info:nth-child(4){padding-right: 6em;}
 #flats .info:nth-child(1){border: 1px solid #DDDBD7;}
-.info.search
-{
-	background: #6F6558;
-	border-radius: 36px;
-	padding: 0.5em 0.7em;
-	margin-right: 0;
-	border: 1px solid #DDDBD7;
-}
 #index .info:hover
 {
 	background: #6F6558;
@@ -109,13 +101,23 @@ body
 	color: white;
 	cursor: pointer;
 }
+.info.search
+{
+	background: #6F6558;
+	border-radius: 36px;
+	padding: 0.5em 0.7em;
+	margin-right: 0;
+	border: 1px solid #DDDBD7;
+}
 .info.search:hover
 {
 	background: #8A8278;
-	border: 1px solid #8A8278;
+	border: 1px solid #DDDBD7;
 	border-radius: 36px;
 	cursor: pointer;
 }
+
+
 #index .box2
 {
 	padding: 0.5em 3em;
@@ -232,7 +234,64 @@ body
 	font-size: 12px;
 	margin-top: 1em;
 }
->>>>>>> Stashed changes
+#flats h3 
+{
+	color: #6F6558;
+	text-align: center;
+}
+#flats .bt2
+{
+	color: white;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 1em;
+	background: #2C2823;
+	border: 1px solid #2C2823;
+	border-radius: 16px;
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+#indexFooter{width: 65%; margin: 5em auto 0 auto;}
+#indexFooter h3{color: #6F6558; margin-left: 0.5em;}
+#indexFooter hr{margin-top: -0.1em; border: 1px solid #6F6558;}
+#indexFooter .cities 
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 15px;
+	margin: 3em 0;
+}
+#indexFooter h5 
+{
+    font-size: 14px;
+    color: #2C2823;
+    font-weight: 500;
+}
+#indexFooter p 
+{
+    font-size: 12px;
+    color: #6F6558;
+}
+#indexFooter a{ color: #6F6558;}
+#indexFooter .support
+{
+	margin: 3em 0;
+	display: inline-flex;
+}
+#indexFooter .support .box{margin-right: 10em;}
+#indexFooter .footer
+{
+	margin: 1em 0;
+	display: flex;
+	justify-content: space-between;
+}
+#indexFooter .footer .box{display: inline-flex;}
+#indexFooter .footer p { margin-right: 1em;}
+#indexFooter .footer img { margin-right: 0.5em; }
+#indexFooter .footer figure{display: inline-flex; margin-right: 1em;}
+
+
 /*house page*/
 #house
 {
