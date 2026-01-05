@@ -65,6 +65,7 @@ hr
   width: 100%;
   z-index: 888;
   height: auto;
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.2);
 }
 body:not(.js-ready) #headerMini{display: none;}
 #flats
@@ -155,9 +156,14 @@ body:not(.js-ready) #headerMini{display: none;}
 .index.main .box1{border: 1px solid white;}
 .index.main .info:nth-child(1){border: 1px solid #433D35;}
 .index.main .info{border: 1px solid #433D35; color: white; border-left: 1px solid white;}
-.index.main .info:hover{background: white; border: 1px solid white; color: #211E1A;}
+.index.main .info:hover, .index.main .info.active
+{
+	background: white; 
+	border: 1px solid white; 
+	color: #211E1A;
+}
 
-.index .info:hover
+.index .info:hover, .index .info.active
 {
 	background: #433D35;
 	border: 1px solid #433D35;
@@ -331,8 +337,10 @@ body:not(.js-ready) #headerMini{display: none;}
 .filter.bt
 {
 	background: none;
-	display: inline-flex;
-	padding: 1.3em 0.8em 0.6em 0.8em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5em 0.8em;
 	border: 1px solid #211E1A;
 	border-radius: 26px;
 	text-align: left;
@@ -344,25 +352,28 @@ body:not(.js-ready) #headerMini{display: none;}
 	height: 23px;
 }
 .filter:nth-child(10){border-bottom: 2px solid #211E1A;}
-.filter.bt:nth-child(13)
+.filter.bt.arrow-btn
 {
-	padding: 1em;
+	width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: auto 0;
 }
-.filter.bt:nth-child(13) img
+.filter.bt.arrow-btn img
 {
-	margin: 0.3em 0.5em;
-	
+	width: 8px;
 }
 .filter:hover
 {
 	border-bottom: 2px solid #211E1A;
 	cursor: pointer;
 }
+.filter:hover img{animation: toggle 1s ease-in-out 1;}
 .filter.bt:hover
 {
 	border-bottom: 1px solid #211E1A;
 }
-
+.filter.bt:hover img{animation: toggle 1s ease-in-out 0;}
 
 
 #flats .card
@@ -374,12 +385,14 @@ body:not(.js-ready) #headerMini{display: none;}
 	margin-bottom: 3em;
 }
 #flats .card .photo img{border-radius: 16px;}
+#flats .card:hover{transform: scale(1.009); filter: drop-shadow(2px 4px 8px white);}
 #flats .card #fav
 {
 	position: absolute;
 	top: 1em;
 	right: 1em;
 }
+#flats .card #fav:hover{animation: toggle 1s ease-in-out 1;}
 #flats .card #sl
 {
 	position: absolute;
@@ -429,11 +442,16 @@ body:not(.js-ready) #headerMini{display: none;}
 	font-weight: 500;
 	padding: 1em;
 	background: #2C2823;
-	border: 1px solid #2C2823;
+	border: 1px solid transparent;
 	border-radius: 16px;
 	text-align: center;
 	display: block;
 	margin: auto;
+}
+#flats .bt2:hover
+{
+	background: #6F6558;
+	cursor: pointer;
 }
 #indexFooter{width: 65%; margin: 5em auto 0 auto;}
 #indexFooter h3{color: #6F6558; margin-left: 0.5em;}
@@ -444,12 +462,14 @@ body:not(.js-ready) #headerMini{display: none;}
 	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 	gap: 15px;
 	margin: 3em 0;
+	cursor: pointer;
 }
 #indexFooter h5 
 {
+	font-family: "Nunito Sans Normal ExtraLight";
     font-size: 14px;
     color: #2C2823;
-    font-weight: 500;
+    font-weight: 600;
 }
 #indexFooter p 
 {
@@ -463,6 +483,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	margin: 3em 0;
 	display: inline-flex;
 }
+#indexFooter .support p{cursor: pointer;}
 #indexFooter .support .box{margin-right: 10em;}
 #indexFooter .footer
 {
@@ -509,7 +530,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	display: none;
 	z-index: 1003;
 }
-.form #message
+.form .message
 {
 	text-align: center;
 	font-family: "Nunito Sans Normal ExtraLight";
@@ -530,8 +551,8 @@ body:not(.js-ready) #headerMini{display: none;}
 	margin-bottom: 1.5em;
 }
 .form form h4{font-weight: 400; color: #A6A098; margin-bottom: 3em;}
-.form form #registerBtn{font-weight: 400; color: #A6A098; background: none; border: none; font-size: 16px;}
-.form form #closeBtn
+.form form #registerBtn{cursor:pointer; font-weight: 400; color: #A6A098; background: none; border: none; font-size: 16px;}
+.form form .closeBtn
 {
 	position: absolute;
 	top: 2.5em;
@@ -539,14 +560,14 @@ body:not(.js-ready) #headerMini{display: none;}
 	background: none;
 	border: none;
 }
-.form form #closeBtn:hover{cursor: pointer;}
+.form form .closeBtn:hover{cursor: pointer; transform: scale(0.9);}
 .form form input, .form form .signBtn
 {
 	padding: 1.5em 2em;
 	background: none;
 	border-radius: 64px;
 	border: 1px solid #A6A098;
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 #register #registerEmail, #register #registerRepassword{margin-bottom: 0.5em;}
 .form form input[type='submit']
@@ -558,6 +579,13 @@ body:not(.js-ready) #headerMini{display: none;}
 	font-weight: 600;
 	margin-bottom: 0.5em;
 }
+.form form input[type='submit']:hover
+{
+	background: #8A8278;
+	border: 1px solid #8A8278;
+	color: #433D35;
+	cursor: pointer;
+}
 #register form input[type='submit']{margin: 2em 0 3em 0;}
 .form form .signBtn
 {
@@ -565,6 +593,11 @@ body:not(.js-ready) #headerMini{display: none;}
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+}
+.form form .signBtn:hover
+{
+	 background: rgba(0,0,0,.06); 
+	 cursor: pointer;
 }
 .form form .signBtn h4{margin: 0 0.5em 0 0; flex-basis: 95%; color:  #211E1A; font-size: 16px;}
 #register form .signBtn h4{text-align: center; margin: 0 0.5em 0 0;}
@@ -636,6 +669,7 @@ body:not(.js-ready) #headerMini{display: none;}
 #profile .avatar h1{margin: 0; font-size: 64px; color: white;}
 #profile .addavatar
 {
+	cursor: pointer;
 	position: absolute;
 	top: 21em;
 	display: flex;
@@ -683,6 +717,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 #profile.edit .create .sub{width: 80%;}
 #profile.edit .create .sub a{color: #211E1A;}
@@ -710,6 +745,13 @@ body:not(.js-ready) #headerMini{display: none;}
 	text-align: center;
 	font-size: 14px;
 }
+#profile .bt3:hover
+{
+	background: #6F6558;
+	border: 1px solid #6F6558;
+	color: white;
+	cursor: pointer;
+}
 .bt1
 {
 	padding: 1em 2em;
@@ -722,7 +764,12 @@ body:not(.js-ready) #headerMini{display: none;}
 	font-size: 12px;
 	font-weight: 600;
 }
-
+.bt1:hover
+{
+	background: #8A8278;
+	border: 1px solid #8A8278;
+	cursor: pointer;
+}
 /*verification*/
 #verify
 {
@@ -869,6 +916,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	color: #211E1A;
 	font-size: 16px;
 	font-weight: 400;
+	cursor: pointer;
 }
 .verify .bt_back img{margin-right: 0.5em;}
 
@@ -887,6 +935,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	border: 1px dashed #211E1A;
 	border-radius: 16px;
 	margin-bottom: 10em;
+	cursor: pointer;
 }
 .verify .upload .title{font-weight: 600;}
 .verify .upload .sub{font-size: 10px; font-weight: 300; font-family: "Nunito Sans Normal ExtraLight";}
@@ -1081,4 +1130,25 @@ body:not(.js-ready) #headerMini{display: none;}
   grid-column-start: 4;
   grid-row-start: 2;
   background-image: url("img/flat_studio_photo5.svg");
+}
+
+/*animations*/
+@keyframes toggle 
+{
+	25%
+	{
+		transform: skew(-15deg, 15deg);
+	}
+	75%
+	{
+		transform: skew(15deg, -15deg);
+	}
+}
+
+/*mobile version*/
+@media screen and (max-width: 425px)
+{
+	/*main page*/
+	/*profile page*/
+	
 }
