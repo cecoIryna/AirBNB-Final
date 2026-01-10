@@ -939,52 +939,121 @@ body:not(.js-ready) #headerMini{display: none;}
 }
 .verify .upload .title{font-weight: 600;}
 .verify .upload .sub{font-size: 10px; font-weight: 300; font-family: "Nunito Sans Normal ExtraLight";}
+
+
 /*house page*/
-#house
+#about_house
+{
+	color: #211E1A;
+	scroll-behavior: smooth;
+}
+
+#about_house a
+{
+	color: #211E1A;
+	line-height: 17px;
+}
+
+.ptSmall
+{
+	font-size: 12px;
+}
+
+.bolderT
+{
+	font-weight: 700;
+}
+
+.noline 
+{
+	text-decoration: none;
+}
+
+.ptBig
+{
+	font-size: 16px;
+}
+
+
+#about_house h1
+{
+	font-size: 20px;
+}
+
+.small_lineH
+{
+	line-height: 17px;
+}
+
+#about_house h2 { 
+  font-size: 24px;
+  margin-bottom: 7px;
+  line-height: 32px;
+}
+
+#about_house h3 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#about_house span
+{
+	font-size: 14px;
+}
+
+#about_house p {
+	font-family: "Nunito Sans Normal ExtraLight";
+  font-size: 16px;
+  line-height: 17px;
+}
+
+
+#house_page
 {
 	width: 100%;
 	padding: 4em 0 0;
 }
 
-#house nav
+#house_page nav
 {
-	width: 75%;
+	width: 58%;
 	display: flex;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
+	gap: 255px;
 	align-items: center;
 	margin: 0 auto;
 }
 
-#house .logo  a img 
+#house_page .logo  a img 
 {
 	width: 120px;
 }
 
-#house .left 
+#house_page .left 
 {
-	width: 57%;
 	display: flex;
-	justify-content: space-between;
+	gap: 58px;
 }
 
-#house .center
+#house_page .center
 {
 	display: flex;
 	gap: 38px;
 	align-items: center;
 }
 
-#house .find 
+#house_page .find 
 {
 	width: 303px;
 	padding: 4px 5px 4px 28px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	border: solid 1px #2C2823;
 	border-radius: 28px;
 }
 
-#house .find button
+#house_page .find button
 {
 	width: 39px;
 	height: 39px;
@@ -995,17 +1064,13 @@ body:not(.js-ready) #headerMini{display: none;}
 	border-radius: 50px;
 }
 
-#house .find button img
+#house_page .find button img
 {
 	width: 21px;
 }
 
-#house a
-{
-	color: #211E1A;
-}
 
-#house .menu
+#house_page .menu
 {
 	width: 87px;
 	padding: 4px 16px;
@@ -1016,14 +1081,14 @@ body:not(.js-ready) #headerMini{display: none;}
 	border-radius: 26px;
 }
 
-#house .menu a
+#house_page .menu a
 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-#house .menu a .profile 
+#house_page .menu a .profile 
 {
 	width: 21px;
 }
@@ -1035,13 +1100,8 @@ body:not(.js-ready) #headerMini{display: none;}
 
 #m_house .title
 {
-	width: 75%;
+	width: 58%;
 	margin: 1.5em auto;
-}
-
-#m_house h1
-{
-	font-size: 25px;
 }
 
 #m_house .under_title
@@ -1088,49 +1148,269 @@ body:not(.js-ready) #headerMini{display: none;}
 	gap: 10px;
 }
 
-#m_house .under_title .actions a
-{
-	color: #211E1A;
-	font-size: 12px;
-	font-weight: 500;
-}
-
-.photo_gallery {
+#photo_gallery {
 	width: 75%;
+	margin: 0 auto;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(4, 272px);
   grid-template-rows: repeat(2, 274px);
-  margin: 0 auto;
-  gap: 8px;
+  grid-column-gap: 11px;
+  grid-row-gap: 5px;
+
+  scroll-behavior: smooth;
+}
+
+.photo
+{
+	background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  background-position: center;
 }
     
-.photo1 {
+.one {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
   background-image: url("img/flat_studio_photo1.svg");
 }
 
-.photo2 {
+.two {
   grid-column-start: 3;
   background-image: url("img/flat_studio_photo2.svg");
 }
 
-.photo3 {
+.three {
   grid-column-start: 4;
   background-image: url("img/flat_studio_photo3.svg");
 }
 
-.photo4 {
+.four {
   grid-column-start: 3;
   grid-row-start: 2;
   background-image: url("img/flat_studio_photo4.svg");
 }
 
-.photo5 {
+.five {
   grid-column-start: 4;
   grid-row-start: 2;
   background-image: url("img/flat_studio_photo5.svg");
 }
+
+
+.booking_section {
+  width: 58%;
+  margin: 47px auto;
+  display: grid;
+  grid-template-columns: 653px 1fr;
+  gap: 85px;
+  min-height: 200vh;
+}
+
+.booking_info .underH {
+  margin-bottom: 30px;
+}
+
+.owner
+{
+	display: flex;
+	gap: 55px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 2em 0 0 62px;
+  font-family: "Nunito Sans Normal ExtraLight";
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+}
+
+.additional
+{
+	display: flex;
+	gap: 20px;
+	margin: 55px 0 30px;
+}
+
+#m_house .description
+{
+	margin: 48px 0 50px;
+}
+
+#m_house .description p 
+{
+	margin-bottom: 50px;
+}
+
+.sleep_place
+{
+	margin: 55px 0 44px;
+}
+
+.small_bed
+{
+	width: 317px;
+	height: 218px;
+	margin: 21px 0 17px;
+	background-image: url("img/flat_studio_photo4.svg");
+	background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  background-position: center;
+}
+
+.small_section_title
+{
+	margin-bottom: 10px;
+}
+
+.zruchnosti
+{
+	margin: 54px 0 30px;
+}
+
+/*aside*/
+.booking_box {
+  position: sticky;
+  top: 70px;
+  border: 1px solid #211E1A;
+  border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+  padding: 15px 24px;
+  background: none;
+
+  width: 374px;
+  height: 299px; 
+
+  transition: height 0.4s ease;
+}
+
+.booking_box.expanded {
+  height: 462px; /* раскрыто */
+}
+
+.booking_full {
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.booking_box.expanded .booking_full {
+    opacity: 1;
+}
+
+.price_rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.price small {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.rating img {
+	width: 16px;
+}
+
+.dates_guests {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  border: 1px solid #2C2823;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.dates_guests .cell {
+  padding: 2px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #E7E3DE;
+}
+
+.dates_guests .checkin {
+  border-right: 1px solid #2C2823;
+}
+
+.dates_guests .guests {
+  grid-column: span 2;
+  border-top: 1px solid #2C2823;
+}
+
+.dates_guests .label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.dates_guests .label {
+  font-size: 10px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.dates_guests input {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.book_btn {
+	width: 100%;
+  background-color: #6F6558;
+  color: #fff;
+  padding: 15px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+}
+
+.testBox
+{
+	height: 100vh;
+}
+
+.spisok
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 258px;
+}
+
+.zruch_opt
+{
+	display: flex;
+}
+
 
 /*animations*/
 @keyframes toggle 

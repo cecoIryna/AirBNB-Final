@@ -6,8 +6,8 @@
 	<title>House</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-	<header id="house">
+<body id="about_house">
+	<header id="house_page">
 		<nav>
 			<div class="logo">
 				<a href="index.html"><img src="img\logo.svg" alt="logo"></a>
@@ -19,7 +19,7 @@
 						<button><img src="img\search.svg" alt="search"></button>
 					</div>
 
-					<a href="###">Запропонувати помешкання на HomeFU</a>
+					<a href="###" class="ptSmall">Запропонувати помешкання на HomeFU</a>
 
 				</div>
 				<div class="menu">
@@ -59,14 +59,157 @@
 			</div>
 		</div>
 
-		<div class="photo_gallery">
-		    <div class="photo1"></div>
-		    <div class="photo2"></div>
-		    <div class="photo3"></div>
-		    <div class="photo4"></div>
-		    <div class="photo5"></div>
+		<section id="photo_gallery">
+		    <div class="photo one"></div>
+		    <div class="photo two"></div>
+		    <div class="photo three"></div>
+		    <div class="photo four"></div>
+		    <div class="photo five"></div>
+		</section>
+
+		<div class="booking_section">
+		    <div class="booking_info">
+		    	<div class="owner">
+		    		<div>
+				        <h2>Помешкання для оренди, господар – Ілона</h2>
+				        <p class="underH">4 гостя, 1 спальня, 2 ліжка, 1 ванна кімната</p>
+				    </div>
+			        <div><img src="img/ilona.png"></div>
+			    </div>
+		        <hr>
+		        <div class="features">
+		            <div class="feature">
+		                <h3>Окреме робоче місце</h3>
+		                <p>Зона спільного користування з Wi‑Fi, яка добре підходить для роботи.</p>
+		            </div>
+		            <div class="feature">
+		                <h3>Самостійне прибуття</h3>
+		                <p>Самостійне прибуття за допомогою ключа в сейфі.</p>
+		            </div>
+		            <div class="feature">
+		                <h3>Безкоштовне скасування бронювання до 30 грудня</h3>
+		            </div>
+		        </div>
+
+		        <div class="additional">
+		        	<a href="#photo_gallery" class="bolderT noline ptBig">Фотографії</a>
+		        	<a href="#" class="bolderT noline ptBig">Зручності</a>
+		        	<a href="#" class="bolderT noline ptBig">Відгуки</a>
+		        	<a href="#" class="bolderT noline ptBig">Розташування</a>
+		        </div>
+
+		        <hr> 
+
+		        <div class="description">
+	                <p>Деякі дані перекладено автоматично. <a href="#" class="bolderT">Показати мовою оригіналу.</a></p>
+	                <p>Вона оснащена кондиціонером і безкоштовним Wi-Fi. Ви можете відпочити на затишній терасі, насолоджуючись видом на море. Квартира розміром 24 метри з повністю обладнаною кухнею з мікрохвильовою пічю, вітальнею , телевізором з плоским екраном, власною ванною кімнатою з пральною машиною, феном. Є холодильник, плита, чайник. Спальне місце - двоспальне ліжко. На території комплексу розташовані магазин, аптека, кав 'ярня та інші сервіси, поруч...</p>
+	                <a href="###" class="bolderT">Показати більше</a>
+            	</div>
+
+            	<hr>
+
+	            <div class="sleep_place">
+	                <a href="#" class="bolderT">Місце для сну</a>
+	                <div class="small_bed"></div>
+	                <p class="bolderT small_section_title">Спальня</p>
+	                <p><span class="bolderT">1</span> ліжко king-size </p>
+	            </div>
+
+	            <hr>
+
+	            <div class="zruchnosti">
+	            	<h1 class="small_lineH">Які тут зручності?</h1>
+	            	<div class="spisok">
+		            	<div class="zruch_opt">
+		            		<img src="img/kitchen.svg">
+		            		<p>Кухня</p>
+		            	</div>
+		            	<div class="zruch_opt">
+		            		<img src="img/bedroom.svg">
+		            		<p>Окреме місце для сну</p>
+		            	</div>
+		            	<div class="zruch_opt">
+		            		<img src="img/wifi.svg">
+		            		<p>Wi-Fi</p>
+		            	</div>
+		            	<div class="zruch_opt">
+		            		<img src="img/TV.svg">
+		            		<p>Телевізор HDTV з 32-дюймовим екраном та стандартне кабельне ТБ, Netflix, преміальне кабельне підключення.</p>
+		            	</div>
+		            </div>   
+	            </div>
+
+	            <hr>
+		    </div>
+
+
+
+
+
+
+
+	        <aside class="booking_box" id="bookingBox">
+		        <div class="booking_short">
+		            <div class="price_rating">
+		                <p class="price">$63 <span>ніч</span></p>
+		                <div class="rating">
+		                    <img src="img/star.svg" alt="">
+		                    <span>4,95 · 35 відгуків</span>
+		                </div>
+		            </div>
+		            <div class="dates_guests">
+		                <div class="cell checkin"> 
+		                    <span class="label">Прибуття</span>
+		                    <p>04.01.2024</p>
+		                </div>
+		                <div class="cell checkout">
+		                    <span class="label">Виїзд</span>
+		                    <p>09.01.2024</p>
+		                </div>
+		                <div class="cell guests">
+		                    <span class="label">Гості</span>
+		                    <input type="number" value="1">
+		                </div>
+		            </div>
+
+		            <button class="book_btn">Забронювати</button>
+		            <p class="note">Поки що ви нічого не платите</p>
+		        </div>
+
+		        <div class="booking_full">
+		        	<div class="price staying">
+			            <a href="###">$63 x 5 ночей</a>
+			            <span>$ 315</span>
+			        </div>
+			        <div class="price room_clean">
+			            <a href="###">Плата за прибирання</a>
+			            <span>$ 20</span>
+			        </div>
+			        <hr>
+			        <div class="price final">
+			        	<strong>Усього до сплати податків</strong>
+			        	<strong>$ 335</strong>
+		        </div>
+		    </aside>
 		</div>
 	</main>
+
+	<script>
+		const bookingBox = document.getElementById('bookingBox');
+		const section = document.querySelector('.booking_section');
+
+		window.addEventListener('scroll', () => {
+		    const rect = section.getBoundingClientRect();
+
+		    if (rect.top < 150 && rect.bottom > 500) {
+		        bookingBox.classList.add('expanded');
+		    } else {
+		        bookingBox.classList.remove('expanded');
+		    }
+		});
+	</script>
+
+	
 
 </body>
 </html>
