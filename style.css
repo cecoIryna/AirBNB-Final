@@ -1,4 +1,4 @@
-*{margin: 0; padding: 0; box-sizing: border-box; transition: all 0.3s ease-in-out;}
+*{margin: 0; padding: 0; box-sizing: border-box; transition: all 0.3s ease-in-out;	/*outline: 1px solid red;*/}
 
 /*общие настройки*/
 @font-face 
@@ -48,10 +48,12 @@ hr
 	padding: 4em 0 0 0;
 	transition: opacity .25s ease, transform .25s ease;
 }
-.index.main
+#full.profile
 {
-	background: #433D35;
+	height: auto;
 }
+#full.profile .logo img{width: 120px;}
+#full.profile .wrapper{width: 70%;}
 .header-full
 {
 	position: relative;
@@ -67,6 +69,7 @@ hr
   height: auto;
   box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.2);
 }
+#short.indexMap{display: none;}
 body:not(.js-ready) #headerMini{display: none;}
 #flats
 {
@@ -375,6 +378,7 @@ body:not(.js-ready) #headerMini{display: none;}
 }
 .filter.bt:hover img{animation: toggle 1s ease-in-out 0;}
 
+#flats .wrapper .mobile{display: none;}
 
 #flats .card
 {
@@ -604,7 +608,8 @@ body:not(.js-ready) #headerMini{display: none;}
 
 
 /*registration*/
-#house .left.profile{width: 37%;}
+#short.profile{display: none;}
+#short.registration{display: none;}
 #profile
 {
 	width: 75%;
@@ -655,6 +660,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	position: relative; 
 }
 #profile .avatar
 {
@@ -671,7 +677,7 @@ body:not(.js-ready) #headerMini{display: none;}
 {
 	cursor: pointer;
 	position: absolute;
-	top: 21em;
+	top: 11em;
 	display: flex;
 	padding: 0.1em 1em;
 	background: #DDDBD7;
@@ -771,6 +777,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	cursor: pointer;
 }
 /*verification*/
+#short.verification{display: none;}
 #verify
 {
 	width: 100%;
@@ -1429,6 +1436,178 @@ body:not(.js-ready) #headerMini{display: none;}
 @media screen and (max-width: 425px)
 {
 	/*main page*/
+	#headerFull, #headerMini, #indexFooter{display: none;}
+	#short.indexMap
+	{
+		display: block;
+		width: 100%;
+		position: relative;
+	}
+	#short.indexMap .header
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 3em 3em 0 3em;
+		padding: 1em 0;
+		font-family: "Nunito Sans Normal ExtraLight";
+	}
+	#short.indexMap .header .box:nth-child(1){flex-basis: 15%;}
+	#short.indexMap .header .box:nth-child(2){flex-basis: 60%;}
+	#short.indexMap .header .box.sign img{width: 15px; height: auto; margin: 0;}
+	#short.indexMap .header p{font-size: 10px;} 
+	#short.indexMap .map img
+	{
+		width: 100%; height: auto;
+	}
+	#flats
+	{
+		border-radius: 33px;
+		padding: 1em 3em 5em 3em;
+		margin: 0 auto 5em;
+		position: absolute;
+		top: 23em;
+	}
+	#flats .wrapper
+	{
+		width: 100%;
+		flex-direction: column;
+	}
+	#flats .wrapper .mobile
+	{
+		display: block;
+		width: 100%;
+		border: none;
+	}
+	#flats .wrapper .mobile.box2{margin: 1em 0 2em;}
+	#flats .wrapper .mobile.box1
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+	#flats .wrapper .mobile.box2 .filter.bt
+	{
+		width: 100%;
+		padding: 1em 2em;
+		border: 1px solid #8A8278;
+		border-radius: 16px;
+	}
+	#flats .wrapper .mobile.box1 .filter.bt
+	{
+		padding: 0 0.3em;
+	}
+	#flats .wrapper .mobile.box1 .filter.bt img{width: 15px; height: auto;}
+	#flats .card
+	{
+		text-align: left;
+		margin-bottom: 2em;
+		width: 100%;
+	}
+	#flats .card .photo img{width: 100%;}
+	#flats h3{font-size: 16px;}
+
 	/*profile page*/
-	
+	#full.profile{display: none;}
+	#short.registration
+	{
+		width: 100%;
+		display: block;
+		padding: 3em 3em 0 3em;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	#short.registration .logo{margin: 0 auto;}
+	#profile
+	{
+		width: 100%;
+		padding: 0 3em;
+		align-items: center; 
+		margin: 1em auto 5em;
+		flex-direction: column;
+	}
+	#profile .user{width: 100%;}
+	#profile .user .box{width: 100%;}
+	#profile .create{width: 100%}
+	#profile .create .box
+	{
+		width: 100%;
+		margin-top: 1em;
+	}
+
+
+	/*edit profile page*/
+	#house.profile{display: none;}
+	#short.profile
+	{
+		width: 100%;
+		display: block;
+		padding: 3em 3em 0 3em;
+	}
+	#profile.edit
+	{
+		width: 100%;
+		padding: 0 3em;
+		align-items: center; 
+		margin: 1em auto 5em;
+		flex-direction: column;
+	}
+	#profile.edit .user{width: 100%; margin: 0 0 3em; padding: 0;}
+	#profile .avatar
+	{
+		width: 100px;
+		height: 100px;
+	}
+	#profile .addavatar{top: 6em;}
+	#profile.edit .create{width: 100%; margin: 1em 0; padding: 0;}
+	#profile.edit .create .wrapper{width: 100%; margin: 0; padding: 0;}
+	#profile.edit .addinfo{flex-direction: column;margin: 0 0 1em; padding: 0;}
+	#profile.edit .addinfo .box{margin: 0; padding: 0; width: 100%;}
+	#profile.edit .urinfo
+	{
+		width: 100%; margin: 0; padding: 1em;
+	}
+	#profile.edit .urinfo h5{margin-bottom: 0; line-height: 1.5em;}
+	#profile.edit .addinterest{justify-content: space-between;margin: 0; padding: 0 1em;}
+	#profile.edit .addinterest .box{flex-basis: 30%;}
+	#profile.edit .create .sub{width: 100%;}
+	#profile.edit h5{font-size: 12px; margin-bottom: 1em; line-height: 1.8em;}
+	#profile.edit h3, #profile.edit .create h1, #profile.edit h2{font-size: 16px;}
+	#profile.edit hr{width: 100%;}
+	#indexFooter.profile{display: none;}
+
+	/*verification pages*/
+	#verify{display: none;}
+	#short.verification
+	{
+		width: 100%;
+		display: flex;
+		padding: 3em 3em 0 3em;
+		justify-content: space-between;
+	}
+	#short.verification img{width: 50px; height: 50px;}
+	.verify
+	{
+		width: 100%;
+		padding: 0 3em;
+		align-items: center; 
+		margin: 5em auto;
+		flex-direction: column;
+		line-height: 1.3em;
+	}
+	.verify .options
+	{
+		width: 100%;
+		margin-bottom: 2em;
+	}
+	.verify .info{width: 100%;}
+	.verify .options .uploads
+	{
+		flex-direction: column;
+	}
+	.verify .upload
+	{
+		width: 60%;
+		margin: 1em auto;
+	}
 }
