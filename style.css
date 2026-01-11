@@ -994,6 +994,12 @@ body:not(.js-ready) #headerMini{display: none;}
 #about_house h3 {
   font-size: 16px;
   line-height: 20px;
+  font-family: "Nunito Sans Normal ExtraLight";
+}
+
+.withLine
+{
+	text-decoration-line: underline;
 }
 
 #about_house span
@@ -1007,6 +1013,11 @@ body:not(.js-ready) #headerMini{display: none;}
   line-height: 17px;
 }
 
+.small_font_r
+{
+	font-size: 10px;
+}
+
 
 #house_page
 {
@@ -1016,7 +1027,7 @@ body:not(.js-ready) #headerMini{display: none;}
 
 #house_page nav
 {
-	width: 58%;
+	width: 59%;
 	display: flex;
 	/*justify-content: space-between;*/
 	gap: 255px;
@@ -1032,7 +1043,7 @@ body:not(.js-ready) #headerMini{display: none;}
 #house_page .left 
 {
 	display: flex;
-	gap: 58px;
+	gap: 68px;
 }
 
 #house_page .center
@@ -1077,7 +1088,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border: solid 1px #2C2823;
+	border: solid 1px #211E1A;
 	border-radius: 26px;
 }
 
@@ -1100,7 +1111,7 @@ body:not(.js-ready) #headerMini{display: none;}
 
 #m_house .title
 {
-	width: 58%;
+	width: 59%;
 	margin: 1.5em auto;
 }
 
@@ -1199,11 +1210,11 @@ body:not(.js-ready) #headerMini{display: none;}
 
 
 .booking_section {
-  width: 58%;
-  margin: 47px auto;
+  width: 59%;
+  margin: -40px auto 47px;
   display: grid;
   grid-template-columns: 653px 1fr;
-  gap: 85px;
+  gap: 97px;
   min-height: 200vh;
 }
 
@@ -1229,16 +1240,9 @@ body:not(.js-ready) #headerMini{display: none;}
   margin-bottom: 10px;
 }
 
-.additional
-{
-	display: flex;
-	gap: 20px;
-	margin: 55px 0 30px;
-}
-
 #m_house .description
 {
-	margin: 48px 0 50px;
+	margin: 32px 0 50px;
 }
 
 #m_house .description p 
@@ -1268,15 +1272,223 @@ body:not(.js-ready) #headerMini{display: none;}
 	margin-bottom: 10px;
 }
 
-.zruchnosti
+#zruchnosti
 {
-	margin: 54px 0 30px;
+	margin: 54px 0 45px;
 }
 
+#zruchnosti button
+{
+	width: 259px;
+  border: solid 1px #211E1A;
+  background: none;
+  color: #211E1A;
+  padding: 15px 22px;
+  border-radius: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 37px;
+  font-family: ;
+}
+
+.spisok
+{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-column-gap: 139px;
+	grid-row-gap: 20px;
+	margin-top: 32px;
+}
+
+.zruch_opt
+{
+	display: flex;
+	align-items: flex-start;;
+	gap: 12px;
+}
+
+.div4 {
+    grid-row: span 2 / span 2;
+    grid-row-start: 2;
+}
+
+.zruch_opt img
+{
+	width: 21px;
+}
+
+.calender_section
+{
+	font-family: "Nunito Sans Normal ExtraLight";
+	margin: 59px 0 10px;
+}
+
+.datesH 
+{
+	margin-top: 13px;
+}
+
+.calender_section .months
+{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 62px;
+  margin: 28px 0 89px;
+}
+
+.calender_section .month-title
+{
+  text-align:center;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.calender_section .dow
+{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align:center;
+  margin-bottom: 8px;
+}
+.calender_section .dow h5{font-weight: 400;}
+.calender_section .days
+{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align:center;
+}
+
+.calender_section .day
+{
+  border:none;
+  cursor: pointer;
+  padding: 10px 0;
+  border-radius: 26px;
+}
+
+.simple
+{
+	background: none;
+}
+
+.simple:hover{ background: #D8D2C6; }
+
+.selected {
+  background: #211E1A;
+  color: white;
+  border-radius: 26px;
+}
+
+.selected:hover {
+  background: #5A5247;
+}
+
+.disabled {
+  color: #6F6558;
+  background: none;
+  text-decoration-line: line-through;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.calender_section .empty{ height: 40px; }
+
+.uder_calender
+{
+	display: flex;
+	align-items: center;
+	gap: 475px;
+}
+
+
+.reviews
+{
+	width: 59%;
+	margin: 0 auto;
+	height: 200vh;
+}
+
+
+
+
+
 /*aside*/
+.additional_sticky
+{
+	position: sticky;
+  top: 0;
+  background: #DDDBD7;
+  padding: 30px 0 0;
+  z-index: 20;
+	
+	opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease;
+}
+
+.additional_sticky.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.additional_sticky .options_menu
+{
+	display: flex;
+	gap: 20px;
+}
+
+.menu_add
+{
+	width: 59%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto 10px;
+}
+
+.sticky_booking {
+	display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: 0.3s ease;
+  gap: 31px;
+}
+
+.sticky_booking .text_rating span
+
+
+.sticky_booking .text_rating .rating img
+{
+	width: 16px;
+}
+
+.smallBtn
+{
+	width: 155px;
+	height: 46px;
+  background-color: #6F6558;
+  color: #fff;
+  padding: 15px 31px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.additional_sticky.show-booking .sticky_booking {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 .booking_box {
   position: sticky;
-  top: 70px;
+  top: 120px;
   border: 1px solid #211E1A;
   border-top-left-radius: 30px;
 	border-top-right-radius: 30px;
@@ -1290,7 +1502,8 @@ body:not(.js-ready) #headerMini{display: none;}
 }
 
 .booking_box.expanded {
-  height: 462px; /* раскрыто */
+  height: 462px;
+  border-radius: 30px; /* раскрыто */
 }
 
 .booking_full {
@@ -1394,22 +1607,7 @@ body:not(.js-ready) #headerMini{display: none;}
   text-align: center;
 }
 
-.testBox
-{
-	height: 100vh;
-}
 
-.spisok
-{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 258px;
-}
-
-.zruch_opt
-{
-	display: flex;
-}
 
 
 /*animations*/
@@ -1432,3 +1630,5 @@ body:not(.js-ready) #headerMini{display: none;}
 	/*profile page*/
 	
 }
+
+

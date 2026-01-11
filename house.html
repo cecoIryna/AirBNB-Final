@@ -37,13 +37,7 @@
 				<div class="rating">
 					<div class="rating-value">
 						<img src="img\star.svg" alt="profile">
-						<span>4,95</span>
-					</div>
-					<div class="rating-count">
-						<span>35 відгуків</span>
-					</div>
-					<div class="location">
-						<span>Одеса, Одеська область, Україна</span>
+						<span>4,95 · 35 відгуків · Одеса, Одеська область, Україна</span>
 					</div>
 				</div>
 				<div class="actions">
@@ -66,6 +60,30 @@
 		    <div class="photo four"></div>
 		    <div class="photo five"></div>
 		</section>
+
+		<div class="additional_sticky" id="additionalMenu">
+			<div class="menu_add">
+				<div class="options_menu">
+					<a href="#photo_gallery" class="bolderT noline ptBig">Фотографії</a>
+		        	<a href="#zruchnosti" class="bolderT noline ptBig">Зручності</a>
+		        	<a href="#" class="bolderT noline ptBig">Відгуки</a>
+		        	<a href="#" class="bolderT noline ptBig">Розташування</a>
+				</div>
+				<div class="sticky_booking">
+					<div class="text_rating">
+						<span>$63 ніч</span>
+						<div class="rating">
+					    	<img src="img/star.svg">
+					        <p class="small_font_r">4,95 · 35 відгуків</p>
+				    	</div>
+					</div>
+				    
+				    <button class="smallBtn">Забронювати</button>
+			    </div>
+			</div>
+			
+			<hr class="additional_line">
+	    </div>
 
 		<div class="booking_section">
 		    <div class="booking_info">
@@ -91,15 +109,6 @@
 		            </div>
 		        </div>
 
-		        <div class="additional">
-		        	<a href="#photo_gallery" class="bolderT noline ptBig">Фотографії</a>
-		        	<a href="#" class="bolderT noline ptBig">Зручності</a>
-		        	<a href="#" class="bolderT noline ptBig">Відгуки</a>
-		        	<a href="#" class="bolderT noline ptBig">Розташування</a>
-		        </div>
-
-		        <hr> 
-
 		        <div class="description">
 	                <p>Деякі дані перекладено автоматично. <a href="#" class="bolderT">Показати мовою оригіналу.</a></p>
 	                <p>Вона оснащена кондиціонером і безкоштовним Wi-Fi. Ви можете відпочити на затишній терасі, насолоджуючись видом на море. Квартира розміром 24 метри з повністю обладнаною кухнею з мікрохвильовою пічю, вітальнею , телевізором з плоским екраном, власною ванною кімнатою з пральною машиною, феном. Є холодильник, плита, чайник. Спальне місце - двоспальне ліжко. На території комплексу розташовані магазин, аптека, кав 'ярня та інші сервіси, поруч...</p>
@@ -109,7 +118,7 @@
             	<hr>
 
 	            <div class="sleep_place">
-	                <a href="#" class="bolderT">Місце для сну</a>
+	                <h3 class="withLine">Місце для сну</h3>
 	                <div class="small_bed"></div>
 	                <p class="bolderT small_section_title">Спальня</p>
 	                <p><span class="bolderT">1</span> ліжко king-size </p>
@@ -117,7 +126,7 @@
 
 	            <hr>
 
-	            <div class="zruchnosti">
+	            <div id="zruchnosti">
 	            	<h1 class="small_lineH">Які тут зручності?</h1>
 	            	<div class="spisok">
 		            	<div class="zruch_opt">
@@ -125,28 +134,139 @@
 		            		<p>Кухня</p>
 		            	</div>
 		            	<div class="zruch_opt">
-		            		<img src="img/bedroom.svg">
-		            		<p>Окреме місце для сну</p>
-		            	</div>
-		            	<div class="zruch_opt">
 		            		<img src="img/wifi.svg">
 		            		<p>Wi-Fi</p>
 		            	</div>
-		            	<div class="zruch_opt">
+		            	<div class="zruch_opt div4">
+		            		<img src="img/bedroom.svg">
+		            		<p>Окреме місце для сну</p>
+		            	</div>
+		            	<div class="zruch_opt div4">
 		            		<img src="img/TV.svg">
 		            		<p>Телевізор HDTV з 32-дюймовим екраном та стандартне кабельне ТБ, Netflix, преміальне кабельне підключення.</p>
 		            	</div>
+
+		            	<div class="zruch_opt">
+		            		<img src="img/elevator.svg">
+		            		<p>Ліфт</p>
+		            	</div>
+		            	<div class="zruch_opt">
+		            		<img src="img/washmash.svg">
+		            		<p>Пральна та сушильна машина</p>
+		            	</div>
+		            	<div class="zruch_opt">
+		            		<img src="img/conditioner.svg">
+		            		<p>Портативна система кондиціонування</p>
+		            	</div>
+		            	<div class="zruch_opt">
+		            		<img src="img/heaven.svg">
+		            		<p>Укомплектована кухня</p>
+		            	</div>
+		            	<div class="zruch_opt">
+		            		<img src="img/fen.svg">
+		            		<p>Фен</p>
+		            	</div>
+		            	<div class="zruch_opt">
+		            		<img src="img/parking.svg">
+		            		<p>Паркінг</p>
+		            	</div>
 		            </div>   
+		            <button><h3>Показати всі зручності(10)</h3></button>
 	            </div>
 
 	            <hr>
-		    </div>
 
+	            <div class="calender_section">
+	            	<h1 class="small_lineH">Одеса : 5 ночей</h1>
+	            	<p class="datesH">19 лист.2023р · 24лист.2023</p>
+	            	<div class="months">
+	            		<div class="month">
+				        	<p class="month-title bolderT">Листопад 2023</p>
+				        	<div class="dow">
+				        		<h5>Пн</h5><h5>Вт</h5><h5>Ср</h5><h5>Чт</h5><h5>Пт</h5><h5>Сб</h5><h5>Нд</h5>
+				        	</div>
+				        	<div class="days">
+				        		<span class="empty"></span><span class="empty"></span>
+					          	<button class="day disabled">1</button>
+					          	<button class="day disabled">2</button>
+					          	<button class="day disabled">3</button>
+					          	<button class="day disabled">4</button>
+					          	<button class="day disabled">5</button>
+					          	<button class="day disabled">6</button>
+					          	<button class="day simple">7</button>
+					          	<button class="day simple">8</button>
+					          	<button class="day simple">9</button>
+					          	<button class="day simple">10</button>
+					          	<button class="day disabled">11</button>
+					          	<button class="day simple">12</button>
+					          	<button class="day simple">13</button>
+					          	<button class="day simple">14</button>
+					          	<button class="day simple">15</button>
+					          	<button class="day simple">16</button>
+					          	<button class="day disabled">17</button>
+					          	<button class="day disabled">18</button>
+					          	<button class="day selected">19</button>
+					          	<button class="day simple">20</button>
+					          	<button class="day simple">21</button>
+					          	<button class="day simple">22</button>
+					          	<button class="day simple">23</button>
+					          	<button class="day selected">24</button>
+					          	<button class="day simple">25</button>
+					          	<button class="day simple">26</button>
+					          	<button class="day simple">27</button>
+					          	<button class="day simple">28</button>
+					          	<button class="day simple">29</button>
+					          	<button class="day simple">30</button>
+				        	</div>
+				      </div>
 
-
-
-
-
+				      <div class="month">
+				      		<p class="month-title bolderT">Грудень 2023</p>
+				        	<div class="dow">
+				        		<h5>Пн</h5><h5>Вт</h5><h5>Ср</h5><h5>Чт</h5><h5>Пт</h5><h5>Сб</h5><h5>Нд</h5>
+				        	</div>
+				        	<div class="days">
+				        		<span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span>
+				        		<button class="day simple">1</button>
+				          		<button class="day simple">2</button>
+						        <button class="day simple">3</button>
+						        <button class="day simple">4</button>
+						        <button class="day simple">5</button>
+						        <button class="day simple">6</button>
+						        <button class="day simple">7</button>
+						        <button class="day simple">8</button>
+						        <button class="day simple">9</button>
+						        <button class="day simple">10</button>
+						        <button class="day simple">11</button>
+						        <button class="day simple">12</button>
+						        <button class="day simple">13</button>
+						        <button class="day simple">14</button>
+						        <button class="day simple">15</button>
+						        <button class="day simple">16</button>
+						        <button class="day simple">17</button>
+						        <button class="day simple">18</button>
+						        <button class="day simple">19</button>
+						        <button class="day simple">20</button>
+						        <button class="day simple">21</button>
+						        <button class="day simple">22</button>
+						        <button class="day simple">23</button>
+						        <button class="day simple">24</button>
+						        <button class="day simple">25</button>
+						        <button class="day simple">26</button>
+						        <button class="day simple">27</button>
+						        <button class="day simple">28</button>
+						        <button class="day simple">29</button>
+						        <button class="day simple">30</button>
+						        <button class="day simple">31</button>
+						    </div>
+						</div>
+					</div>
+					<div class="uder_calender">
+						<img src="img/key.svg">
+						 <a href="###">Очистити дати</a>
+					</div>
+	            </div>
+		    </div> 
 
 	        <aside class="booking_box" id="bookingBox">
 		        <div class="booking_short">
@@ -192,24 +312,89 @@
 		        </div>
 		    </aside>
 		</div>
+
+		<div class="reviews">
+			<hr>
+			<div class="rating">
+                <img src="img/star.svg" alt="">
+                <span>5,0 · 35 відгуків</span>
+            </div>
+            <div class="statistics">
+            	<div class="statistics_opt">
+            		<p>Чистота</p>
+            		<hr class="line_stat">
+            		<p>4,9</p>
+            	</div>
+            	<div class="statistics_opt">
+            		<p>Точність</p>
+            		<hr class="line_stat">
+            		<p>5,0</p>
+            	</div>
+            	<div class="statistics_opt">
+            		<p>Комунікація</p>
+            		<hr class="line_stat">
+            		<p>4,9</p>
+            	</div>
+            	<div class="statistics_opt">
+            		<p>Розташування</p>
+            		<hr class="line_stat">
+            		<p>4,9</p>
+            	</div>
+            </div>
+		</div>
 	</main>
 
 	<script>
 		const bookingBox = document.getElementById('bookingBox');
-		const section = document.querySelector('.booking_section');
+		const features = document.querySelector('.features');
+		const menu = document.getElementById('additionalMenu');
+		const line = document.querySelector('.additional_line');
+		const reviews = document.querySelector('.reviews');
 
 		window.addEventListener('scroll', () => {
-		    const rect = section.getBoundingClientRect();
+		    const featuresRect = features.getBoundingClientRect();
+		    const reviewsRect = reviews.getBoundingClientRect();
 
-		    if (rect.top < 150 && rect.bottom > 500) {
+		    if (featuresRect.bottom < 120) {
 		        bookingBox.classList.add('expanded');
+		        menu.classList.add('active');
 		    } else {
 		        bookingBox.classList.remove('expanded');
+		        menu.classList.remove('active');
+		    }
+
+		    if (reviewsRect.top <= 120) {
+		        menu.classList.add('show-booking');
+		    } else {
+		        menu.classList.remove('show-booking');
 		    }
 		});
-	</script>
 
-	
+
+
+		const days = document.querySelectorAll('.day');
+
+		function getSelected() {
+		    return document.querySelectorAll('.day.selected');
+		}
+
+		days.forEach(day => {
+		    day.addEventListener('click', () => {
+
+		        if (day.classList.contains('selected')) {
+		            day.classList.remove('selected');
+		            day.classList.add('simple');
+		            return;
+		        }
+
+		        if (getSelected().length >= 2) {
+		            return;
+		        }
+
+		        day.classList.add('selected');
+		    });
+		});
+	</script>
 
 </body>
 </html>
