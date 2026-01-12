@@ -70,6 +70,7 @@ hr
   box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.2);
 }
 #short.indexMap{display: none;}
+#searchFlat.index{display: none;}
 body:not(.js-ready) #headerMini{display: none;}
 #flats
 {
@@ -439,7 +440,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	color: #6F6558;
 	text-align: center;
 }
-#flats .bt2
+#flats .bt2, #searchFlat .bt2
 {
 	color: white;
 	font-size: 16px;
@@ -452,7 +453,7 @@ body:not(.js-ready) #headerMini{display: none;}
 	display: block;
 	margin: auto;
 }
-#flats .bt2:hover
+#flats .bt2:hover, #searchFlat .bt2:hover
 {
 	background: #6F6558;
 	cursor: pointer;
@@ -1681,11 +1682,73 @@ body:not(.js-ready) #headerMini{display: none;}
 {
 	/*main page*/
 	#headerFull, #headerMini, #indexFooter{display: none;}
+	#searchFlat.index
+	{
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		background: #DDDBD7;
+		padding: 0em 3em 3em;
+		align-items: center;
+		z-index: 3;
+	}
+	#searchFlat.index .logo{margin: 0 auto;}
+	#textNphoto{width: 100%;}
+	#searchFlat.index h4{font-weight: 400; text-align: center;font-size: 14px; margin-bottom: 1em;}
+	#searchFlat.index .main_page_photo{border-radius: 16px; margin-bottom: 1em; width: 100%;}
+	#searchFlat.index h3{line-height: 1.5em; margin-bottom: 0.5em;}
+	#searchFlat.index h5{line-height: 1.5em; font-weight: 400;}
+	#searchFlat.index .bt
+	{
+		width: 100%;
+		background: #DDDBD7;
+		border: 1px solid #211E1A;
+		border-radius: 16px;
+		padding: 0;
+		margin: 1em 0;
+		display: flex; 
+		justify-content: space-between; 
+		align-items: center;
+		position: relative;
+	}
+	#searchFlat.index .bt_mob
+	{
+		width: 100%;
+		background: #DDDBD7;
+		border-radius: 16px;
+		border: none;
+		text-align: left;
+		padding: 1em;
+	}
+	
+	#searchFlat.index .bt_mob:nth-child(2){width: 50%;}
+	#searchFlat.index .bt_mob span{color: #433D35;}
+	#searchFlat.index .bt_mob:hover{background: white;}
+	#searchFlat.index .bt2{width: 80%;font-size: 20px; font-weight: 600; position: absolute; bottom: 5em;}
+	#searchFlat.index .month
+	{
+		width: 90%;
+		background: #6F6558;
+		padding: 1em;
+		border: 1px solid #211E1A;
+		border-radius: 16px;
+		color: white;
+		position: absolute;
+		top: 4.5em;
+		left: 0;
+		display: none;
+	}
+	#searchFlat.index #datesPanel2{right: 0; left: auto;}
+	#searchFlat.index .day{color: white;}
+	#searchFlat.index .day:hover{ background: #211E1A; }
 	#short.indexMap
 	{
 		display: block;
 		width: 100%;
 		position: relative;
+		z-index: 1;
 	}
 	#short.indexMap .header
 	{
@@ -1711,6 +1774,7 @@ body:not(.js-ready) #headerMini{display: none;}
 		margin: 0 auto 5em;
 		position: absolute;
 		top: 23em;
+		z-index: 2;
 	}
 	#flats .wrapper
 	{
@@ -1749,6 +1813,15 @@ body:not(.js-ready) #headerMini{display: none;}
 	}
 	#flats .card .photo img{width: 100%;}
 	#flats h3{font-size: 16px;}
+
+	.form
+	{
+		width: 90%;
+		height: auto;
+		top: 3em;
+		padding: 1em;
+		display: none;
+	}
 
 	/*profile page*/
 	#full.profile{display: none;}
