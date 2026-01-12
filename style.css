@@ -464,7 +464,7 @@ body:not(.js-ready) #headerMini{display: none;}
 #indexFooter .cities 
 {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	grid-template-columns: repeat(6, 1fr);
 	gap: 15px;
 	margin: 3em 0;
 	cursor: pointer;
@@ -506,13 +506,16 @@ body:not(.js-ready) #headerMini{display: none;}
 /*sign in and register*/
 #overlay 
 {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1002;
+    position: fixed;
+    top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 
-  opacity: 0;
-  pointer-events: none;
+  	background: rgba(0, 0, 0, 0.6);
+  	z-index: 1002;
+  	opacity: 0;
+  	pointer-events: none;
 }
 #overlay.active 
 {
@@ -601,7 +604,7 @@ body:not(.js-ready) #headerMini{display: none;}
 }
 .form form .signBtn:hover
 {
-	 background: rgba(0,0,0,.06); 
+	 background: #B4D8EC; 
 	 cursor: pointer;
 }
 .form form .signBtn h4{margin: 0 0.5em 0 0; flex-basis: 95%; color:  #211E1A; font-size: 16px;}
@@ -873,7 +876,10 @@ body:not(.js-ready) #headerMini{display: none;}
 {
     content:"";
     position:absolute;
-    inset:3px;
+    top: 3px;
+    bottom: 3px;
+    right: 3px;
+    left: 3px;
     background:#DDDBD7;
     border:1px solid #211E1A;
     border-radius:360px;
