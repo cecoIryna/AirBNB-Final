@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pay Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="###" class="box"><img src="img\logo.svg" alt="logo"></a>
+        <hr>
+    </header>
+
+    <div id="checkout_container">
+    
+    <div class="checkout_header">
+        <a href="#" class="back_link">
+            <img src="img\Vector_big.svg" alt="logo">
+            <h1>Підтвердження й оплата</h1>
+        </a>
+    </div>
+
+    <div class="checkout_content">
+        <div class="checkout_main">
+            
+            <div class="info_box rare_find">
+                <div class="text">
+                    <h3>Це рідкісна знахідка</h3>
+                    <p>Помешкання господаря Марія зазвичай заброньовано.</p>
+                </div>
+                <div class="icon">
+                    <img src="img\hands.svg" alt="icon">
+                </div>
+            </div>
+
+            <section class="section_block">
+                <h2>Ваша подорож</h2>
+                <div class="trip_row">
+                    <div>
+                        <h3>Дати</h3>
+                        <p>4–9 січ. 2024</p>
+                    </div>
+                    <a href="#" class="edit_link">Редагувати</a>
+                </div>
+                <div class="trip_row">
+                    <div>
+                        <h3>Гості</h3>
+                        <p>1 гість</p>
+                    </div>
+                    <a href="#" class="edit_link">Редагувати</a>
+                </div>
+            </section>
+
+            <hr class="separator">
+
+            <section class="section_block">
+                <h2>Виберіть варіант оплати</h2>
+                
+                <div class="payment_selector">
+                    <label class="radio_card active" onclick="selectPayment(this)">
+                        <div class="radio_info">
+                            <span class="radio_title">Оплатити в повному обсязі</span>
+                            <span class="radio_desc">Сплатіть усю суму ($335.00) одразу.</span>
+                        </div>
+                        <input type="radio" name="payment_type" checked>
+                        <span class="custom_radio"></span>
+                    </label>
+
+                    <label class="radio_card" onclick="selectPayment(this)">
+                        <div class="radio_info">
+                            <span class="radio_title">Оплата двома частинами</span>
+                            <span class="radio_desc">$65.60 потрібно сплатити сьогодні, $262.40 – 22 груд. 2023р... <a href="#">Докладніше</a></span>
+                        </div>
+                        <input type="radio" name="payment_type">
+                        <span class="custom_radio"></span>
+                    </label>
+                </div>
+            </section>
+
+            <hr class="separator">
+
+            <section class="section_block">
+                <h2>Оплатити за допомогою</h2>
+                
+                <div class="payment_method_top">
+                    <select>
+                        <option>Кредитна або дебетова картка</option>
+                        <option>Google Pay</option>
+                    </select>
+                </div>
+
+                <div class="credit_card_form">
+                    <div class="input_group full">
+                        <input type="text" placeholder="Номер картки">
+                    </div>
+                    <div class="input_group half_container">
+                        <input type="text" placeholder="Термін дії" class="half_left">
+                        <input type="text" placeholder="CVV" class="half_right">
+                    </div>
+                    <div class="input_group full">
+                        <input type="text" placeholder="Індекс">
+                    </div>
+                    <div class="input_group full">
+                        <select class="country_select">
+                            <option>Україна</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="separator">
+
+            <section class="section_block">
+                <h2>Потрібно для подорожі</h2>
+                <div class="requirement_row">
+                    <div>
+                        <h3>Напишіть господарю</h3>
+                        <p>Повідайте господарю про мету своєї подорожі та час прибуття.</p>
+                    </div>
+                    <button class="action_btn">Додати</button>
+                </div>
+                 <div class="requirement_row">
+                    <div>
+                        <h3>Фотографія профілю</h3>
+                        <p>Господарі хочуть знати, хто гостюватиме в їхній оселі.</p>
+                    </div>
+                     <button class="action_btn">Додати</button>
+                </div>
+                 <div class="requirement_row">
+                    <div>
+                        <h3>Номер телефону</h3>
+                        <p>Додайте й підтвердьте номер телефону, щоб отримувати новини.</p>
+                    </div>
+                     <button class="action_btn">Додати</button>
+                </div>
+            </section>
+
+            <hr class="separator">
+
+            <section class="section_block">
+                <h2>Правила скасування бронювання</h2>
+                <p class="small_text">
+                    <strong>Безкоштовне скасування бронювання до 30 груд.</strong> У разі скасування бронювання до прибуття 4 січ. вам повернуть частину коштів. <a href="#">Докладніше</a>
+                </p>
+            </section>
+
+            <hr class="separator">
+
+            <section class="section_block">
+                <h2>Основні правила</h2>
+                <p class="small_text">Ми просимо всіх мандрівників пам'ятати кілька простих правил:</p>
+                <ul class="rules_list">
+                    <li>Дотримуйтеся правил дому</li>
+                    <li>Ставтеся до помешкання господаря як до власної оселі</li>
+                </ul>
+            </section>
+
+            <hr class="separator">
+
+            <div class="footer_note">
+                <p>Натискаючи кнопку нижче, я приймаю умови <a href="#">Правила дому господаря</a>...</p>
+            </div>
+
+            <button class="confirm_button">Підтвердити й оплатити</button>
+
+        </div>
+
+        <div class="checkout_sidebar">
+            <div class="price_card">
+                <div class="card_header">
+                    <div class="card_img">
+                         <img src="" alt="Appartment">
+                    </div>
+                    <div class="card_info">
+                        <p class="card_type">Помешкання для оренди цілком</p>
+                        <p class="card_title">Студія та спальня з панорамою моря! Аркадія!</p>
+                        <p class="card_rating">★ 4.95 · 15 відгуків</p>
+                    </div>
+                </div>
+
+                <hr class="card_sep">
+
+                <div class="price_details">
+                    <h3>Детальніше про ціну</h3>
+                    <div class="price_row">
+                        <span>$63.20 x 5 ночей</span>
+                        <span>$315.00</span>
+                    </div>
+                    <div class="price_row">
+                        <span class="underline">Плата за прибирання</span>
+                        <span>$20.00</span>
+                    </div>
+                </div>
+
+                <hr class="card_sep">
+
+                <div class="total_row">
+                    <span>Усього (USD)</span>
+                    <span>$335.00</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function selectPayment(element) {
+        document.querySelectorAll('.radio_card').forEach(el => el.classList.remove('active'));
+        // Добавляем нажатому
+        element.classList.add('active');
+        // Находим input внутри и ставим checked (на случай клика по диву)
+        element.querySelector('input').checked = true;
+    }
+</script>
+</body>
+</html>

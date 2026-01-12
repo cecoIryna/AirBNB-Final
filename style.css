@@ -1841,7 +1841,358 @@ body:not(.js-ready) #headerMini{display: none;}
 .lightbox .next { right: 30px; }
 
 
+/* --- Стили для страницы оформления заказа --- */
 
+#checkout_container {
+    width: 100%;
+    max-width: 1120px; /* Стандартная ширина контента */
+    margin: 0 auto;
+    padding: 2em 20px 5em;
+    color: #211E1A; /* Используем твой цвет текста */
+    font-family: inherit; /* Наследуем шрифт сайта */
+}
+
+/* Заголовок с кнопкой назад */
+.checkout_header {
+    margin-bottom: 2em;
+    padding-top: 1em;
+}
+
+.checkout_header .back_link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #211E1A;
+}
+
+.checkout_header h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.checkout_header .arrow {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* Сетка: левая колонка + правая колонка */
+.checkout_content {
+    display: flex;
+    gap: 80px;
+    flex-direction: row;
+}
+
+.checkout_main {
+    flex: 1.3; /* Левая часть шире */
+}
+
+.checkout_sidebar {
+    flex: 0.9; /* Правая часть уже */
+}
+
+/* Адаптив: на мобильных в колонку */
+@media (max-width: 900px) {
+    .checkout_content {
+        flex-direction: column-reverse;
+    }
+}
+
+/* --- Элементы левой колонки --- */
+
+/* Блок "Редкая находка" */
+.info_box.rare_find {
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.rare_find h3 {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.rare_find p {
+    font-size: 14px;
+    margin: 0;
+    color: #717171;
+}
+
+/* Общие заголовки секций */
+.section_block h2 {
+    font-size: 22px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.section_block h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.section_block p {
+    font-size: 14px;
+    color: #717171;
+    margin: 0;
+}
+
+/* Строки информации (Поездка) */
+.trip_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.edit_link, .section_block a {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #211E1A;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Разделитель */
+hr.separator {
+    border: none;
+    border-top: 1px solid #DDDDDD;
+    margin: 32px 0;
+}
+
+/* --- Выбор оплаты (Radio Cards) --- */
+.payment_selector {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio_card {
+    border: 1px solid #DDDDDD;
+    padding: 24px; /* Увеличенные отступы как в макете */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.radio_card:first-child {
+    border-radius: 12px 12px 0 0;
+    border-bottom: none; /* Чтобы не было двойной границы */
+}
+
+.radio_card:last-child {
+    border-radius: 0 0 12px 12px;
+    border-top: 1px solid #DDDDDD;
+}
+
+.radio_card.active {
+    border: 2px solid #211E1A; /* Черная рамка при выборе */
+    z-index: 1;
+}
+
+.radio_info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.radio_title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.radio_desc {
+    font-size: 14px;
+    color: #717171;
+}
+
+/* Скрываем стандартный input */
+.radio_card input {
+    display: none;
+}
+
+/* Кастомный кружок радио-кнопки */
+.custom_radio {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #B0B0B0;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.radio_card input:checked + .custom_radio {
+    border-color: #211E1A;
+    background: #211E1A;
+}
+
+.radio_card input:checked + .custom_radio::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --- Форма карты --- */
+.payment_method_top select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #B0B0B0;
+    border-radius: 8px 8px 0 0; /* Закругление только сверху */
+    font-size: 16px;
+    background: white;
+    margin-bottom: -1px; /* Склеиваем с нижним блоком */
+}
+
+.credit_card_form {
+    border: 1px solid #B0B0B0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+.input_group input, .input_group select {
+    width: 100%;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+
+.input_group.full {
+    border-bottom: 1px solid #B0B0B0;
+}
+
+.input_group.full:last-child {
+    border-bottom: none;
+}
+
+.half_container {
+    display: flex;
+    border-bottom: 1px solid #B0B0B0;
+}
+
+.half_left {
+    border-right: 1px solid #B0B0B0 !important;
+}
+
+/* --- Сайдбар (Карточка цены) --- */
+.price_card {
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    padding: 24px;
+    position: sticky;
+    top: 20px; /* Прилипает при скролле */
+    background: white;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+
+.card_header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.card_img img {
+    width: 100px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.card_type {
+    font-size: 12px;
+    color: #717171;
+    margin-bottom: 4px;
+}
+
+.card_title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.card_rating {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card_sep {
+    border: none;
+    border-top: 1px solid #DDDDDD;
+    margin: 16px 0;
+}
+
+.price_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #444;
+}
+
+.price_row .underline {
+    text-decoration: underline;
+}
+
+.total_row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 16px;
+    color: #211E1A;
+    margin-top: 8px;
+}
+
+/* --- Кнопка подтверждения --- */
+.confirm_button {
+    width: 100%;
+    background-color: #6F6558; /* Цвет из твоего CSS #house .find button */
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 32px;
+    transition: background 0.3s;
+}
+
+.confirm_button:hover {
+    background-color: #5a5247;
+}
+
+.footer_note {
+    font-size: 12px;
+    color: #717171;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.action_btn {
+    background: none;
+    border: 1px solid #211E1A;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
 
 
 
