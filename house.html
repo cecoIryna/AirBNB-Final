@@ -22,9 +22,9 @@
 					<a href="###" class="ptSmall">Запропонувати помешкання на HomeFU</a>
 
 				</div>
-				<div class="menu">
-					<a href="index.html"><img src="img\menu.svg" alt="menu"></a>
-					<a href=""><img class="profile" src="img\profile.svg" alt="profile"></a>
+				<div class="box sign">
+					<button><a href="###"><img src="img\menu.svg" alt="menu"></a></button>
+					<button id="openBtn"><a href="###"><img src="img\profile.svg" alt="profile"></a></button>
 				</div>
 			</div>
 		</nav>
@@ -317,7 +317,7 @@
 			<hr>
 			<div class="rating">
                 <img src="img/star.svg" alt="">
-                <h4>5,0 · <a href="#reviews" class="ptBig">35 відгуків</a></h4>
+                <h4 class="boldH">5,0 · <a href="#reviews" class="ptBig">35 відгуків</a></h4>
             </div>
             <div class="statistics">
             	<div class="statistics_opt">
@@ -410,58 +410,248 @@
             </div>
             <button class="borderBtn"><h3>Показати всі 35 відгуків</h3></button>
 		</div>
+
+		<div class="map_section">
+			<h1>Де ви будете</h1>
+			<img src="img\big_map.png">
+			<p class="bolderT">Одеса, Одеська область, Україна</p>
+			<p>Перша лінія біля моря, Аркадія, Французський бульвар</p>
+			<div>
+				<a href="###">Показати більше</a>
+				<img src="img\Vector.svg">
+			</div>
+		</div>
+
+		<div class="owner_section">
+			<div>
+				<img src="img\ilona.png">
+				<h3>Господар:Ілона</h3>
+				<h5>На HomeFU з листопада 2017</h5>
+			</div>
+			<div>
+				<div class="rating">
+			    	<img src="img/star.svg">
+			        <span>35 відгуків</span>
+		    	</div>
+				<div>
+					<img src="img/safe.svg">
+			        <span>Верифікований користувач</span>
+				</div>
+			</div>
+			<div>
+				<
+			</div>
+		</div>
 	</main>
 
+	<div id="overlay"></div>
+
+	<div id="signin" class="form">
+      <form action="" id="signinForm">
+        <h2>Sign In</h2>
+        <button id="closeBtnSig" class="closeBtn" type="button"><img src="img/close.svg"></button>
+        <input type="email" placeholder="Email" id="signinEmail">
+        <input type="password" placeholder="Password" id="signinPassword">
+
+        <input type="submit" value="Continue">
+        <h4>Do not have an account? <button id="registerBtn">Register</button></h4>
+
+        
+
+        <button class="signBtn" type="button">
+        	<img src="img/google.svg" alt="google">
+        	<h4>Sign In with Google</h4>
+        </button>
+        <button class="signBtn" type="button">
+        	<img src="img/facebook.svg" alt="google">
+        	<h4>Sign In with Facebook</h4>
+        </button>
+        <button class="signBtn" type="button">
+        	<img src="img/apple.svg" alt="google">
+        	<h4>Sign In with Apple</h4>
+        </button>
+
+        <div id="signinMessage" class="message"></div>
+      </form>
+    </div>
+
+
+    <div id="register" class="form">
+      <form action="" id="registerForm">
+        <h2>Register</h2>
+        <button id="closeBtnReg" class="closeBtn"><img src="img/close.svg"></button>
+        <input type="email" placeholder="Email" id="registerEmail">
+        <h4>We will send you an email to confirm your email address</h4>
+        <input type="password" placeholder="Password" id="registerPassword">
+        <input type="password" placeholder="Repeat password" id="registerRepassword">
+        <h4>*Get acquainted with our Privacy policy</h4>
+
+        <input type="submit" value="Continue">
+
+        
+        <button class="signBtn" type="button">
+        	<img src="img/google.svg" alt="google">
+        	<h4>Sign In with Google</h4>
+        </button>
+        <button class="signBtn" type="button">
+        	<img src="img/facebook.svg" alt="google">
+        	<h4>Sign In with Facebook</h4>
+        </button>
+        <button class="signBtn" type="button">
+        	<img src="img/apple.svg" alt="google">
+        	<h4>Sign In with Apple</h4>
+        </button>
+
+        <div id="registerMessage" class="message"></div>
+      </form>
+    </div>
+
 	<script>
-		const bookingBox = document.getElementById('bookingBox');
-		const features = document.querySelector('.features');
-		const menu = document.getElementById('additionalMenu');
-		const line = document.querySelector('.additional_line');
-		const reviews = document.getElementById('reviews');
+		// форма входа
+let message1 =  document.getElementById('signinMessage');
 
-		window.addEventListener('scroll', () => {
-		    const featuresRect = features.getBoundingClientRect();
-		    const reviewsRect = reviews.getBoundingClientRect();
+document.getElementById('signinForm').addEventListener('submit', function(event) 
+{
+  event.preventDefault();
 
-		    if (featuresRect.bottom < 120) {
-		        bookingBox.classList.add('expanded');
-		        menu.classList.add('active');
-		    } else {
-		        bookingBox.classList.remove('expanded');
-		        menu.classList.remove('active');
-		    }
+  let email = document.getElementById('signinEmail').value.trim();
+  let password = document.getElementById('signinPassword').value.trim();
 
-		    if (reviewsRect.top <= 120) {
-		        menu.classList.add('show-booking');
-		    } else {
-		        menu.classList.remove('show-booking');
-		    }
-		});
+  if(email === 'iryna@gmail.com' && password === 'iryna1234')
+  {
+    message1.textContent = 'Login successfull!';
+    message1.style.color = 'green';
+    setTimeout(() => {window.location.href = 'registration.html';}, 2000);
+  }
+  else
+  {
+    message1.textContent = 'Invalid password or login';
+    message1.style.color = 'red';
+  }
+}
+);
+
+let message2 =  document.getElementById('registerMessage');
+document.getElementById('registerForm').addEventListener('submit', function(event) 
+{
+  event.preventDefault();
+
+  let reg_email = document.getElementById('registerEmail').value.trim();
+  let reg_password = document.getElementById('registerPassword').value.trim();
+  let reg_repassword = document.getElementById('registerRepassword').value.trim();
+
+  if(reg_email === 'iryna@gmail.com' && reg_password === 'iryna1234')
+  {
+    message2.textContent = 'You already registered';
+    message2.style.color = 'red';
+  }
+  else if(reg_email === 'iryna@gmail.com')
+  {
+    message2.textContent = 'This user already exist';
+    message2.style.color = 'red';
+  }
+  else if(reg_password === reg_repassword && reg_password.length>0 && reg_password.length<=50 && reg_email)
+  {
+    message2.textContent = 'Registration successfull!';
+    message2.style.color = 'green';
+    setTimeout(() => {window.location.href = 'index.html';}, 2000);
+  }
+  else
+  {
+    message2.textContent = 'Registration failed!';
+    message2.style.color = 'red';
+  }
+}
+);
+// закрытие и открытие формы входа и регистрации
+document.getElementById('openBtn').addEventListener('click', (e) => {e.preventDefault();
+  document.getElementById('signin').style.display = 'block';
+  document.body.classList.add('no-scroll');
+  document.getElementById('overlay').classList.add('active');});
+document.getElementById('closeBtnSig').addEventListener('click', () =>{
+  document.getElementById('signin').style.display = 'none'; 
+  document.body.classList.remove('no-scroll');
+  document.getElementById('overlay').classList.remove('active');});
+
+document.getElementById('registerBtn').addEventListener('click', (e) => {e.preventDefault();
+  document.getElementById('signin').style.display = 'none';});
+document.getElementById('registerBtn').addEventListener('click', (e) => {e.preventDefault();
+  document.getElementById('register').style.display = 'block';});
+
+document.getElementById('closeBtnReg').addEventListener('click', () =>{
+  document.getElementById('register').style.display = 'none'; 
+  document.body.classList.remove('no-scroll');
+  document.getElementById('overlay').classList.remove('active');});
+
+// открытие и закрытие доп. блоков
+document.getElementById('whereBtn').addEventListener('click', (e) => {e.stopPropagation();
+document.getElementById('wherePanel').style.display = 'block'; 
+document.getElementById('whereBtn').classList.add('active');});
+
+document.getElementById('wherePanel').addEventListener('click', e => e.stopPropagation());
+document.addEventListener('click', () => {document.getElementById('wherePanel').style.display = 'none';
+document.getElementById('whereBtn').classList.remove('active');});
 
 
+document.getElementById('datesBtn').addEventListener('click', (e) => {e.stopPropagation();
+document.getElementById('datesPanel').style.display = 'block';
+document.getElementById('datesBtn').classList.add('active');});
 
-		const days = document.querySelectorAll('.day');
+document.getElementById('datesPanel').addEventListener('click', e => e.stopPropagation());
+document.addEventListener('click', () => {document.getElementById('datesPanel').style.display = 'none';
+document.getElementById('datesBtn').classList.remove('active');});
 
-		function getSelected() {
-		    return document.querySelectorAll('.day.selected');
-		}
 
-		days.forEach(day => {
-		    day.addEventListener('click', () => {
+// анимация aside и menu в house.html
+const bookingBox = document.getElementById('bookingBox');
+    const features = document.querySelector('.features');
+    const menu = document.getElementById('additionalMenu');
+    const line = document.querySelector('.additional_line');
+    const reviews = document.getElementById('reviews');
 
-		        if (day.classList.contains('selected')) {
-		            day.classList.remove('selected');
-		            day.classList.add('simple');
-		            return;
-		        }
+    window.addEventListener('scroll', () => {
+        const featuresRect = features.getBoundingClientRect();
+        const reviewsRect = reviews.getBoundingClientRect();
 
-		        if (getSelected().length >= 2) {
-		            return;
-		        }
+        if (featuresRect.bottom < 120) {
+            bookingBox.classList.add('expanded');
+            menu.classList.add('active');
+        } else {
+            bookingBox.classList.remove('expanded');
+            menu.classList.remove('active');
+        }
 
-		        day.classList.add('selected');
-		    });
-		});
+        if (reviewsRect.top <= 120) {
+            menu.classList.add('show-booking');
+        } else {
+            menu.classList.remove('show-booking');
+        }
+    });
+
+
+// календарь
+    const days = document.querySelectorAll('.day');
+
+    function getSelected() {
+        return document.querySelectorAll('.day.selected');
+    }
+
+    days.forEach(day => {
+        day.addEventListener('click', () => {
+
+            if (day.classList.contains('selected')) {
+                day.classList.remove('selected');
+                day.classList.add('simple');
+                return;
+            }
+
+            if (getSelected().length >= 2) {
+                return;
+            }
+
+            day.classList.add('selected');
+        });
+    });
 	</script>
 
 </body>

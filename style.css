@@ -994,7 +994,7 @@ body:not(.js-ready) #headerMini{display: none;}
 
 #about_house h2 { 
   font-size: 24px;
-  margin-bottom: 7px;
+  
   line-height: 32px;
 }
 
@@ -1007,10 +1007,13 @@ body:not(.js-ready) #headerMini{display: none;}
 #about_house h4 {
   font-size: 16px;
   line-height: 20px;
-  font-family: "Inknut Antiqua Medium";
-  font-weight: 400;
 }
 
+.boldH
+{
+	font-family: "Inknut Antiqua Medium";
+  font-weight: 400;
+}
 
 .withLine
 {
@@ -1085,30 +1088,6 @@ body:not(.js-ready) #headerMini{display: none;}
 }
 
 #house_page .find button img
-{
-	width: 21px;
-}
-
-
-#house_page .menu
-{
-	width: 87px;
-	padding: 4px 16px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border: solid 1px #211E1A;
-	border-radius: 26px;
-}
-
-#house_page .menu a
-{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#house_page .menu a .profile 
 {
 	width: 21px;
 }
@@ -1228,7 +1207,7 @@ body:not(.js-ready) #headerMini{display: none;}
 }
 
 .booking_info .underH {
-  margin-bottom: 30px;
+  margin: 7px 0 30px;
 }
 
 .owner
@@ -1414,8 +1393,7 @@ body:not(.js-ready) #headerMini{display: none;}
 #reviews
 {
 	width: 59%;
-	margin: 0 auto;
-	height: 200vh;
+	margin: 0 auto 45px;
 }
 
 #reviews .rating
@@ -1448,7 +1426,7 @@ body:not(.js-ready) #headerMini{display: none;}
 
 .people_rewies
 {
-	margin: 38px 0 60px;
+	margin: 38px 0 23px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, 1fr);
@@ -1473,6 +1451,11 @@ body:not(.js-ready) #headerMini{display: none;}
 	margin-bottom: 18px;
 }
 
+.map_section
+{
+	width: 59%;
+	margin: 0 auto;
+}
 
 
 /*aside*/
