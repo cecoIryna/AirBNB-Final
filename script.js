@@ -59,6 +59,11 @@ document.getElementById('openBtn').addEventListener('click', (e) => {e.preventDe
   document.getElementById('signin').style.display = 'block';
   document.body.classList.add('no-scroll');
   document.getElementById('overlay').classList.add('active');});
+document.getElementById('openBtnMob').addEventListener('click', (e) => {e.preventDefault();
+  document.getElementById('signin').style.display = 'block';
+  document.body.classList.add('no-scroll');
+  document.getElementById('overlay').classList.add('active');});
+
 document.getElementById('closeBtnSig').addEventListener('click', () =>{
   document.getElementById('signin').style.display = 'none'; 
   document.body.classList.remove('no-scroll');
@@ -73,6 +78,23 @@ document.getElementById('closeBtnReg').addEventListener('click', () =>{
   document.getElementById('register').style.display = 'none'; 
   document.body.classList.remove('no-scroll');
   document.getElementById('overlay').classList.remove('active');});
+
+if(window.innerWidth > 425)
+{
+  document.getElementById('searchFlat').style.display = 'none';
+}
+
+if(window.innerWidth <= 425)
+{
+  document.getElementById('searchBtn').addEventListener('click', (e) => {e.preventDefault();
+  document.getElementById('searchFlat').style.display = 'none';
+  document.body.classList.remove('no-scroll');});
+}
+
+if(document.getElementById('searchFlat').style.display = 'flex' && window.innerWidth <= 425)
+{
+  document.body.classList.add('no-scroll');
+}
 
 // открытие и закрытие доп. блоков
 document.getElementById('whereBtn').addEventListener('click', (e) => {e.stopPropagation();
@@ -92,6 +114,25 @@ document.getElementById('datesPanel').addEventListener('click', e => e.stopPropa
 document.addEventListener('click', () => {document.getElementById('datesPanel').style.display = 'none';
 document.getElementById('datesBtn').classList.remove('active');});
 
+document.getElementById('datesBtn1').addEventListener('click', (e) => {e.stopPropagation();
+document.getElementById('datesPanel1').style.display = 'block';
+document.getElementById('datesBtn1').classList.add('active');
+document.getElementById('textNphoto').style.display = 'none';});
+
+document.getElementById('datesPanel1').addEventListener('click', e => e.stopPropagation());
+document.addEventListener('click', () => {document.getElementById('datesPanel1').style.display = 'none';
+document.getElementById('datesBtn1').classList.remove('active');
+document.getElementById('textNphoto').style.display = 'block';});
+
+document.getElementById('datesBtn2').addEventListener('click', (e) => {e.stopPropagation();
+document.getElementById('datesPanel2').style.display = 'block';
+document.getElementById('datesBtn2').classList.add('active');
+document.getElementById('textNphoto').style.display = 'none';});
+
+document.getElementById('datesPanel2').addEventListener('click', e => e.stopPropagation());
+document.addEventListener('click', () => {document.getElementById('datesPanel2').style.display = 'none';
+document.getElementById('datesBtn2').classList.remove('active');
+document.getElementById('textNphoto').style.display = 'block';});
 
 // сокращение и разворачивание хеддера
 
