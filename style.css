@@ -1001,7 +1001,6 @@ body:not(.js-ready) #headerMini{display: none;}
 
 #about_house h2 { 
   font-size: 24px;
-  
   line-height: 32px;
 }
 
@@ -1472,6 +1471,137 @@ body:not(.js-ready) #headerMini{display: none;}
 	margin: 0 auto;
 }
 
+.map_section .map_img 
+{
+	margin: 34px 0 33px;
+}
+
+.map_section p 
+{
+	margin-bottom: 19px;
+}
+
+.owner_section
+{
+	width: 59%;
+	margin: 0 auto;
+	padding: 41px 0 104px;
+}
+
+.owner_card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.owner_name h5 {
+    color: #6F6558;
+}
+
+.owner_stats {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.owner_stats .rating, 
+.owner_stats .verification {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.owner_stats img {
+    width: 18px;
+}
+
+.owner_details h3 {
+    margin-bottom: 15px;
+}
+
+.owner_details p {
+    margin-bottom: 30px;
+}
+
+.response_info p {
+    margin-bottom: 15px;
+}
+
+.contact_btn {
+    margin: 25px 0;
+}
+
+.info_safe {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    max-width: 400px;
+    margin-top: 25px;
+}
+
+.container_info
+{
+	margin-top: 47px;
+}
+
+/* --- Секция Важлива інформація --- */
+.info_main_title {
+    margin: 31px 0 30px;
+}
+
+.info_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 134px;
+}
+
+.info_column
+{
+	display: flex;
+  flex-direction: column;
+}
+
+.info_column h3 {
+    margin-bottom: 15px;
+}
+
+.info_column a {
+  margin-bottom: 16px;
+  font-family: "Nunito Sans Normal ExtraLight";
+}
+
+/* --- Футер --- */
+.container_footer {
+    width: 59%;
+    margin: 0 auto;
+    padding: 38px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer_breadcrumbs a 
+{
+	font-family: "Nunito Sans Normal ExtraLight";
+}
+
+
+
+
+
+
+
+
+
+
 
 /*aside*/
 .additional_sticky
@@ -1591,14 +1721,11 @@ body:not(.js-ready) #headerMini{display: none;}
   align-items: center;
 }
 
-.price {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.price small {
-	font-size: 14px;
-	font-weight: 400;
+.price 
+{
+	display: flex;
+	align-items: center;
+	gap: 7px;
 }
 
 .rating {
@@ -1839,7 +1966,6 @@ body:not(.js-ready) #headerMini{display: none;}
 
 .lightbox .prev { left: 30px; }
 .lightbox .next { right: 30px; }
-
 
 /* --- Стили для страницы оформления заказа --- */
 

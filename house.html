@@ -273,7 +273,10 @@
 	        <aside class="booking_box" id="bookingBox">
 		        <div class="booking_short">
 		            <div class="price_rating">
-		                <p class="price">$63 <span>ніч</span></p>
+		            	<div class="price">
+		            		<h4 class="price">$63</h4>
+		                	<h3>ніч</h3>
+		            	</div>
 		                <div class="rating">
 		                    <img src="img/star.svg" alt="">
 		                    <span>4,95 · 35 відгуків</span>
@@ -415,8 +418,8 @@
 
 		<div class="map_section">
 			<h1>Де ви будете</h1>
-			<img src="img\big_map.png">
-			<p class="bolderT">Одеса, Одеська область, Україна</p>
+			<img class="map_img" src="img\big_map.png">
+			<p class="bolderT title_p">Одеса, Одеська область, Україна</p>
 			<p>Перша лінія біля моря, Аркадія, Французський бульвар</p>
 			<div>
 				<a href="map_info.html">Показати більше</a>
@@ -425,24 +428,81 @@
 		</div>
 
 		<div class="owner_section">
-			<div>
-				<img src="img\ilona.png">
-				<h3>Господар:Ілона</h3>
-				<h5>На HomeFU з листопада 2017</h5>
-			</div>
-			<div>
-				<div class="rating">
-			    	<img src="img/star.svg">
-			        <span>35 відгуків</span>
-		    	</div>
-				<div>
-					<img src="img/safe.svg">
-			        <span>Верифікований користувач</span>
-				</div>
-			</div>
-			<div>
-			</div>
+			<div class="owner_card">
+		        <img src="img/ilona.png" alt="ilona">
+		        <div class="owner_name">
+		            <h3>Господар: Ілона</h3>
+		            <h5>На HomeFU з листопада 2017</h5>
+		        </div>
+		    </div>
+
+		    <div class="owner_stats">
+		        <div class="rating">
+		            <img src="img/star.svg" alt="star">
+		            <span>35 відгуків</span>
+		        </div>
+		        <div class="verification">
+		            <img src="img/safe.svg" alt="safe">
+		            <span>Верифікований користувач</span>
+		        </div>
+		    </div>
+
+		    <div class="owner_details">
+		        <h3 class="bolderT">Під час подорожі</h3>
+		        <p>Будьте на зв’язку, коли у вас виникнуть запитання</p>
+		        <div class="response_info">
+		            <p>Мови: English, Українська</p>
+		            <p>Швидкість відповіді: 100%</p>
+		            <p>Швидкість відповіді: протягом години</p>
+		        </div>
+		    </div>
+
+		    <button class="borderBtn contact_btn"><h3>Зв'язатись з господарем</h3></button>
+
+		    <div class="info_safe">
+		        <img src="img/safe_pay.svg" alt="safe pay">
+		        <p class="ptSmall">Щоб захистити свою оплату, ніколи не переказуйте кошти та не спілкуйтеся за межами веб-сайту чи застосунку HomeFU.</p>
+		    </div>
+
+			<div class="container_info">
+				<hr>
+		        <h1 class="info_main_title">Важлива інформація</h1>
+		        
+		        <div class="info_grid">
+		            <div class="info_column">
+		                <h3 class="bolderT">Правила дому</h3>
+		                <a class="ptSmall">Прибуття: після 13:00</a> 
+		                <a class="ptSmall">Виїзд: після 10:00</a>
+		                <a class="ptSmall">Максимальна кількість гостей: 4</a>
+		            </div>
+
+		            <div class="info_column">
+		                <h3 class="bolderT">Правила безпеки в помешканні</h3>
+		                <a class="ptSmall">Датчик диму</a>
+		                <a class="ptSmall">Датчик чадного газу</a>
+		            </div>
+
+		            <div class="info_column">
+		                <h3 class="bolderT">Правила скасування бронювання</h3>
+		                <a class="ptSmall doubleMarg">Безкоштовне скасування бронювання до 30 грудня</a>
+		                <a></a>
+		                <a class="ptSmall">Перегляньте повні правила скасування бронювання, які застосовуються, навіть якщо ви скасовуєте бронювання через хворобу або обмеження подорожей через COVID-19.</a>
+		            </div>
+		        </div>
+		    </div>
 		</div>
+		<footer>
+			<hr>
+	        <div class="container_footer">
+	            <div class="footer_breadcrumbs">
+	                <span class="bolderT ptSmall">HomeFU</span>
+	                <img src="img/Vector.svg"> <a class="ptSmall">Україна</a>
+	                <img src="img/Vector.svg"> <a class="ptSmall">Odesa Oblast</a>
+	                <img src="img/Vector.svg"> <a class="ptSmall">Odesa</a>
+	            </div>
+	            <a href="#" class="bolderT ptSmall">Підтримка</a>
+	        </div>
+		</footer>
 	</main>
 
 	<div id="overlay"></div>
