@@ -2965,4 +2965,657 @@ body:not(.js-ready) #headerMini{display: none;}
 		width: 60%;
 		margin: 1em auto;
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/* --- Стили для страницы оформления заказа --- */
+#pay_page h1
+{
+	font-size: 16px;
+	line-height: 20px;
+}
+
+#pay_page h2 { 
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+
+#pay_page h3 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 28px;
+  margin-bottom: 24px;
+  font-family: "Nunito Sans Normal ExtraLight";
+}
+
+#pay_page h4 {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Nunito Sans Normal ExtraLight";
+}
+
+#pay_page span
+{
+	font-size: 14px;
+}
+
+#pay_page p {
+	font-family: "Nunito Sans Normal ExtraLight";
+  font-size: 10px;
+  line-height: 17px;
+}
+
+#pay_page a
+{
+	font-size: 12px;
+	color: #211E1A;
+}
+
+#pay_page h5
+{
+	font-size: 12px;
+	color: #211E1A;
+	font-weight: 400;
+	line-height: 17px;
+}
+
+#pay_page header
+{
+	padding: 38px 0 10px 21px;
+}
+
+#checkout_container {
+    width: 87%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Заголовок с кнопкой назад */
+.checkout_header {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+  margin-bottom: 39px;
+  padding-top: 46px;
+  justify-content: center;
+}
+
+
+/* --- Выбор оплаты (Radio Cards) --- */
+.section_block
+{
+	padding: 0 0 35px 0;
+}
+
+.payment_selector {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio_card {
+  border: 1px solid #211E1A;
+  padding: 11px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.radio_card:first-child {
+  border-radius: 12px 12px 0 0;
+  border-bottom: none;
+}
+
+.radio_card:last-child {
+  border-radius: 0 0 12px 12px;
+  border-top: 1px solid #211E1A;
+}
+
+.radio_card.active {
+    border: 2px solid #211E1A; /* Черная рамка при выборе */
+    z-index: 1;
+}
+
+.radio_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Скрываем стандартный input */
+.radio_card input {
+    display: none;
+}
+
+/* Кастомный кружок радио-кнопки */
+.custom_radio {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #211E1A;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.radio_card input:checked + .custom_radio {
+    border-color: #211E1A;
+    background: #211E1A;
+}
+
+.radio_card input:checked + .custom_radio::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --- Форма карты --- */
+.payment_method_top select {
+    width: 100%;
+    padding: 20px 21px 20px 65px;
+    border: 1px solid #211E1A;
+    border-radius: 16px;
+    font-size: 14px;
+    background: none;
+    appearance: none;
+    background-image: url('img/Vector_down.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 12px;
+    color: #48433D;
+    font-family: "Nunito Sans Normal ExtraLight";
+}
+
+.credit_card_form {
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.input_group input, .input_group select {
+    width: 100%;
+    border: none;
+    padding: 20px 12px;
+    font-size: 14px;
+    outline: none;
+    background: transparent;
+    font-family: "Nunito Sans Normal ExtraLight";
+}
+
+.together
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	border: 1px solid #211E1A;
+	border-radius: 16px;
+	margin-bottom: 16px;
+}
+
+.full
+{
+	grid-column: span 2;
+	border-bottom: 1px solid #211E1A;
+}
+
+.half_container
+{
+	border-right: 1px solid #211E1A;
+}
+
+.simple_input
+{
+	border: 1px solid #211E1A;
+	border-radius: 16px;
+	margin-bottom: 16px;
+}
+
+.country-region
+{
+	border: 1px solid #211E1A;
+	border-radius: 16px;
+	padding: 11px 12px;
+	color: #48433D;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.country_select{
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    background: none;
+    appearance: none;
+    background-image: url('img/Vector_down.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px top;
+    background-size: 12px;
+    font-family: "Nunito Sans Normal ExtraLight";
+    color: #48433D;
+}
+
+
+/* --- Стили для секции "Потрібно для подорожі" --- */
+.requirement_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Выравнивание по верху, если текста много */
+    margin-bottom: 24px;
+}
+
+.req_text {
+    padding-right: 20px;
+}
+
+.req_text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #211E1A;
+}
+
+.req_text p {
+    font-size: 14px;
+    color: #717171;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Кнопка "Додати" - прозрачная с рамкой */
+.action_btn {
+    background: transparent;
+    border: 1px solid #211E1A;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #211E1A;
+    cursor: pointer;
+    white-space: nowrap; /* Чтобы текст не переносился */
+    transition: background 0.2s;
+}
+
+.action_btn:hover {
+    background-color: #f7f7f7;
+}
+
+/* --- Стили для правил и политики --- */
+.policy_text {
+    font-size: 16px; /* Чуть крупнее для важности */
+    line-height: 1.5;
+}
+
+.link_underline {
+	font-size: 14px;
+    font-weight: 600;
+    color: #211E1A;
+    cursor: pointer;
+}
+
+.rules_intro {
+    margin-bottom: 10px;
+}
+
+.rules_list {
+    list-style: none; /* Убираем стандартные точки */
+    padding: 0;
+    margin: 0;
+}
+
+.rules_list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #211E1A;
+}
+
+/* Кастомные точки списка */
+.rules_list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* --- Стили для нижней зоны подтверждения --- */
+.legal_text {
+    font-size: 12px;
+    color: #48433D;
+    line-height: 17px;
+    margin: 38px 26px 53px 0;
+}
+
+.legal_text a {
+    color: #211E1A;
+}
+
+/* Большая кнопка подтверждения */
+.confirm_button {
+    width: 100%;
+    padding: 17px 24px;
+    margin-bottom: 78px;
+    background-color: #6F6558;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: "Nunito Sans Normal ExtraLight";
+}
+
+.confirm_button:hover {
+    background-color: #5a5247;
+}
+
+/* --- ГЛОБАЛЬНЫЙ ФУТЕР (В самом низу страницы) --- */
+.global_footer {
+    width: 87%;
+    margin: 0 auto;
+}
+
+.footer_right {
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    font-family: "Nunito Sans Normal ExtraLight";
+    display: flex;
+    gap: 17px;
+}
+
+.language
+{
+	display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.social_icons {
+    display: flex;
+    gap: 16px;
+}
+
+
+/* --- Сайдбар (Карточка цены) --- */
+.price_card {
+    border: 1px solid #211E1A;
+    border-radius: 16px;
+    padding: 22px 24px;
+    position: sticky;
+    top: 20px;
+}
+
+.card_header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.card_img img {
+    width: 124px;
+    height: 107px;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: 50% 75%;
+}
+
+.carg_info
+{
+	color: #211E1A;
+	display: flex;
+	flex-direction: column;
+}
+
+.card_rating {
+    margin-top: 46px;
+}
+
+.card_type {
+    margin-bottom: 5px;
+}
+
+.price_details
+{
+	margin-top: 31px;
+	margin-bottom: 23px;
+	font-family: "Nunito Sans Normal ExtraLight";
+}
+
+.price_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.price_row .underline {
+    text-decoration: underline;
+}
+
+.total_row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-top: 25px;
+    font-family: "Nunito Sans Normal ExtraLight";
+}
+
+
+#reservation h1
+{
+	font-size: 16px;
+	line-height: 20px;
+}
+
+#reservation h2 { 
+  font-size: 14px;
+  line-height: 20px;
+  margin: 28px 24px 28px 0;
+}
+
+#reservation h3 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 28px;
+  margin-bottom: 24px;
+  font-family: "Nunito Sans Normal ExtraLight";
+}
+
+#reservation h4 {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Nunito Sans Normal ExtraLight";
+}
+
+#reservation span
+{
+	font-size: 14px;
+}
+
+#reservation p {
+	font-family: "Nunito Sans Normal ExtraLight";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+#reservation a
+{
+	font-size: 12px;
+	color: #211E1A;
+}
+
+#reservation h5
+{
+	font-size: 12px;
+	color: #211E1A;
+	font-weight: 400;
+	line-height: 17px;
+}
+
+#reservation header
+{
+	padding: 38px 0 10px 21px;
+}
+
+/* --- Стили для секции авторизации --- */
+
+.auth_input_group
+{
+	margin: 10px 0 22px;
+}
+
+#reservation .country-region
+{
+	border: 1px solid #211E1A;
+	border-radius: 16px 16px 0 0;
+	padding: 11px 12px;
+	color: #48433D;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+#reservation .country_select{
+    width: 87%;
+    border: none;
+    font-size: 14px;
+    background: none;
+    appearance: none;
+    background-image: url('img/Vector_down.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px top;
+    background-size: 12px;
+    font-family: "Nunito Sans Normal ExtraLight";
+    color: #48433D;
+}
+
+#reservation .simple_input
+{
+	border-top: none;
+	border-radius: 0 0 16px 16px;
+}
+
+.auth_disclaimer {
+    font-size: 11px;
+    margin-top: 23px;
+    margin-bottom: 32px;
+}
+
+#reservation .confirm_button {
+    width: 100%;
+    padding: 17px 24px;
+    margin: 16px 0 27px;
+    background-color: #6F6558;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: "Nunito Sans Normal ExtraLight";
+}
+
+#reservation .confirm_button:hover {
+    background-color: #5a5247;
+}
+
+/* Разделитель "або" */
+.auth_separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.auth_separator .line {
+    width: 50%;
+}
+
+.auth_separator .text {
+    padding: 0 16px;
+    font-size: 12px;
+    color: #717171;
+}
+
+/* Сетка социальных кнопок */
+.social_buttons_grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    margin-bottom: 16px;
+}
+
+.social_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 173px;
+    height: 52px;
+    border: 1px solid #211E1A;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    background: none;
+}
+
+.social_btn:hover {
+    background-color: #f7f7f7;
+}
+
+/* Кнопка Email */
+.email_login_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    padding: 17px 27px;
+    border: 1px solid #211E1A;
+    border-radius: 16px;
+    font-size: 14px;
+    color: #211E1A;
+    cursor: pointer;
+    transition: background 0.2s;
+    background: none;
+}
+
+.email_login_btn:hover {
+    background-color: #f7f7f7;
+}
+
 }

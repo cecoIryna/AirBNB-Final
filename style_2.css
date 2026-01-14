@@ -80,7 +80,7 @@ h5
 }
 
 .mobile {
-  padding-bottom: 90px;
+  padding-bottom: 50px;
 }
 
 main 
@@ -96,7 +96,6 @@ main
   object-fit: cover;
 }
 
-/* SECTIONS */
 .section {
   padding: 16px;
   margin: 0 auto;
@@ -117,7 +116,6 @@ main
   font-size: 14px;
 }
 
-/* HOST */
 .host {
   display: flex;
   gap: 12px;
@@ -131,34 +129,31 @@ main
   margin: 25px 0;
 }
 
-/* FEATURES */
 .features div {
   margin-bottom: 8px;
 }
 
-/* SLEEP */
 .sleep {
   display: flex;
   gap: 10px;
+  margin: 17px 0 14px;
 }
 
 .sleep img {
   width: 50%;
-  border-radius: 12px;
 }
 
 .borderBtn
 {
-  width: 259px;
+  width: 100%;
   border: solid 1px #211E1A;
   background: none;
   color: #211E1A;
-  padding: 15px 22px;
+  padding: 13px 7px;
   border-radius: 16px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 37px;
-  font-family: ;
+  margin-top: 20px;
 }
 
 .spisok
@@ -183,8 +178,6 @@ main
   width: 19px;
 }
 
-
-/* AMENITIES */
 .amenities {
   list-style: none;
 }
@@ -193,7 +186,6 @@ main
   margin-bottom: 8px;
 }
 
-/* MAP */
 .map {
   height: 180px;
   background: #ddd;
@@ -206,30 +198,33 @@ main
   text-align:center;
   font-size: 12px;
   margin-bottom: 10px;
+  color: white;
 }
 
 .month 
 {
-  padding: 15px 38px;
+  width: 90%;
+  padding: 15px 38px 30px;
   background: #6F6558;
   border-radius: 16px;
+  margin: 24px auto 10px;
 }
 
 .dow
 {
   display:grid;
-  grid-template-columns: repeat(7, 40px);
+  grid-template-columns: repeat(7, 35px);
   text-align:center;
   justify-content: center;
   margin-bottom: 10px;
 }
 
-.dow h5{font-weight: 400;}
+.dow h5{font-weight: 400; color: white;}
 
 .days
 {
   display:grid;
-  grid-template-columns: repeat(7, 30px);
+  grid-template-columns: repeat(7, 25px);
   gap: 10px;
   text-align: center;
   justify-content: center;
@@ -262,7 +257,7 @@ main
 }
 
 .disabled {
-  color: #6F6558;
+  color: #8A8278;
   background: none;
   text-decoration-line: line-through;
   cursor: not-allowed;
@@ -278,59 +273,108 @@ main
   text-decoration: underline;
 }
 
-/* REVIEW */
-.review {
-  background: #fafafa;
-  border-radius: 12px;
-}
-
 .review-header {
   font-size: 14px;
   margin-bottom: 6px;
+  background: #6F6558;
+  border-radius: 16px;
+  padding: 17px 21px;
+  color: white;
+}
+
+.pearsone
+{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 26px;
 }
 
 /* HOST INFO */
 .host-info {
   display: flex;
+  justify-content: space-between;
   gap: 12px;
 }
 
-.host-info img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+.host-info img 
+{
+  width: 80px;
+  height: 80px;
 }
 
-/* BUTTONS */
-.contact {
-  width: calc(100% - 32px);
-  margin: 16px;
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid #222;
-  background: #fff;
+.normal
+{
+  font-weight: 400;
 }
 
-/* BOTTOM BOOK */
-.bottom-book {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  border-top: 1px solid #ddd;
-  padding: 12px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.descrp
+{
+  margin-bottom: 15px;
 }
 
-.bottom-book button {
-  background: #6f6558;
-  color: #fff;
+.bolderT 
+{
+  font-weight: 700;
+}
+
+.about_host .opt
+{
+  margin-bottom: 25px;
+}
+
+.about_host div h2
+{
+  margin-bottom: 17px;
+}
+
+.call p 
+{
+  margin-top: 11px;
+}
+
+.rules h2 
+{
+  margin-bottom: 22px;
+}
+
+.backBtn
+{
+  width: 100%;
+  background: #6F6558;
+  color: white;
+  padding: 18px 7px;
+  border-radius: 16px;
   border: none;
-  padding: 12px 20px;
-  border-radius: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: ;
+}
+
+.backBtn a 
+{
+  color: white;
+  text-decoration: none;
+  font-family: "Nunito Sans Normal ExtraLight";
+}
+
+.final_page
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh
+}
+
+.done 
+{
+  width: 87%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 }
