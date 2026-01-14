@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pay Page</title>
+    <title>Reservation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="pay_page">
+<body id="reservation">
     <header>
         <a href="index.html" class="box"><img src="img\logo.svg" alt="logo"></a>
     </header>
@@ -77,98 +77,52 @@
                     <hr>
 
                     <div class="section_block">
-                        <h3>Оплатити за допомогою</h3>
-                        
-                        <div class="payment_method_top">
-                            <select>
-                                <option>Кредитна або дебетова картка</option>
-                                <option>Google Pay</option>
-                            </select>
-                        </div>
+                        <h2>Увійдіть або зареєструйтеся, щоб зробити бронювання</h2>
 
-                        <div class="credit_card_form">
-                            <div class="together">
-                                <div class="input_group full">
-                                    <input type="text" placeholder="Номер картки">
-                                </div>
-                                <div class="input_group half_container">
-                                    <input type="text" placeholder="Термін дії">
-                                </div>
-                                <div class="input_group">
-                                    <input type="text" placeholder="CVV">
-                                </div>
-                            </div>
-                            <div class="input_group simple_input">
-                                <input type="text" placeholder="Індекс">
-                            </div>
+                        <div class="auth_input_group">
                             <div class="country-region">
                                 <p>Країна/регіон</p>
                                 <select class="country_select">
-                                    <option>Україна</option>
-                                    <option>Румунія</option>
-                                    <option>Англія</option>
-                                    <option>Польша</option>
+                                    <option>Україна (+380)</option>
+                                    <option>United States (+1)</option>
+                                    <option>Poland (+48)</option>
                                 </select>
                             </div>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="section_block">
-                        <h3>Потрібно для подорожі</h3>
-                        
-                        <div class="requirement_row">
-                            <div class="req_text">
-                                <h5>Напишіть господарю</h5>
-                                <p>Повідайте господарю про мету своєї подорожі та час прибуття.</p>
+                            <div class="input_group simple_input">
+                                <input type="tel" placeholder="Номер телефону">
                             </div>
                         </div>
 
-                        <div class="requirement_row">
-                            <div class="req_text">
-                                <h5>Фотографія профілю</h5>
-                                <p>Господарі хочуть знати, хто гостюватиме в їхній оселі.</p>
-                            </div>
-                        </div>
-
-                        <div class="requirement_row">
-                            <div class="req_text">
-                                <h5>Номер телефону</h5>
-                                <p>Додайте й підтвердьте номер телефону, щоб отримувати новини про подорож.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="section_block">
-                        <h3>Правила скасування бронювання</h3>
-                        <p class="policy_text">
-                            <a class="bolderT">Безкоштовне скасування бронювання до 30 груд.</a> У разі скасування бронювання до прибуття 4 січ. вам повернуть частину коштів. 
+                        <p class="auth_disclaimer">
+                            Ми зателефонуємо або надішлемо SMS-повідомлення, щоб підтвердити ваш номер. Застосовуються стандартні тарифи вашого оператора за повідомлення і передачу даних. <a href="###">Політика конфіденційності</a>
                         </p>
-                        <a href="#" class="link_underline">Докладніше</a>
-                    </div>
 
-                    <hr>
+                        <button class="confirm_button">Продовжити</button>
 
-                    <div class="section_block">
-                        <h3>Основні правила</h3>
-                        <p class="rules_intro">Ми просимо всіх мандрівників пам'ятати кілька простих правил належної поведінки гостя.</p>
-                        <ul class="rules_list">
-                            <li>Дотримуйтеся правил дому</li>
-                            <li>Ставтеся до помешкання господаря як до власної оселі</li>
-                        </ul>
-                    </div>
+                        <div class="auth_separator">
+                            <hr class="line">
+                            <span class="text">або</span>
+                            <hr class="line">
+                        </div>
 
-                    <hr>
+                        <div class="social_buttons_grid">
+                            <button class="social_btn">
+                                <img src="img/facebook.svg">
+                            </button>
 
-                    <div class="confirmation_area">
-                        <p class="legal_text">
-                            Натискаючи кнопку нижче, я приймаю умови <a href="#">Правила дому господаря</a>, <a href="#">Основні правила для гостей</a>, <a href="#">Правила повторного бронювання та повернення коштів HomeFU</a>, які HomeFU може застосовувати в разі моєї відповідальності за нанесення збитків (стягуючи кошти відповідно до мого способу оплати).
-                        </p>
-                        
-                        <button class="confirm_button">Підтвердити й оплатити</button>
+                            <button class="social_btn">
+                                <img src="img/google.svg">
+                            </button>
+
+                            <button class="social_btn">
+                                <img src="img/apple.svg">
+                            </button>
+                        </div>
+
+                        <button class="email_login_btn">
+                            <img src="img/email.svg">
+                            <p>Використати електронну пошту</p>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -242,28 +196,24 @@
         element.querySelector('input').checked = true;
     }
 
+    const continueBtn = document.querySelector('.section_block .confirm_button');
+    const phoneInput = document.querySelector('input[type="tel"]');
+
+    continueBtn.addEventListener('click', function() {
+        if (phoneInput.value.trim() === "") {
+            alert("Будь ласка, введіть номер телефону, щоб продовжити.");
+            phoneInput.focus(); 
+            return;
+        }
+
+        window.location.href = "paying.html";
+    });
+
     function selectPayment(element) {
         document.querySelectorAll('.radio_card').forEach(el => el.classList.remove('active'));
         element.classList.add('active');
         element.querySelector('input').checked = true;
     }
-
-    const payBtn = document.querySelector('.confirmation_area .confirm_button');
-
-    payBtn.addEventListener('click', function() {
-        const cardNum = document.querySelector('input[placeholder="Номер картки"]');
-        const cardDate = document.querySelector('input[placeholder="Термін дії"]');
-        const cardCvv = document.querySelector('input[placeholder="CVV"]');
-
-        if (cardNum.value === "" || cardDate.value === "" || cardCvv.value === "") {
-            alert("Будь ласка, заповніть платіжні дані.");
-            return;
-        }
-
-        alert("Оплата пройшла успішно! Дякуємо за бронювання.");
-
-        window.location.href = "index.html"; 
-    });
 </script>
 </body>
 </html>
