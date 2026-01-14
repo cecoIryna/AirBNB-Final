@@ -169,13 +169,12 @@ body:not(.js-ready) #headerMini{display: none;}
 
 .index .info:hover, .index .info.active
 {
-	background: #433D35;
-	border: 1px solid #433D35;
+	background: white;
+	border: 1px solid white;
 	border-radius: 20px;
-	color: white;
 	cursor: pointer;
 }
-.index .info:hover span{color: white; opacity: 0.5;}
+
 .index.main .info:hover span{color: #8A8278;}
 .index .search, .index.main .search , #flats .search
 {
