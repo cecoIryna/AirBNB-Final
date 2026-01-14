@@ -114,7 +114,7 @@
 		        <div class="description">
 	                <p>Деякі дані перекладено автоматично. <a href="#" class="bolderT colorDarkA">Показати мовою оригіналу.</a></p>
 	                <p>Вона оснащена кондиціонером і безкоштовним Wi-Fi. Ви можете відпочити на затишній терасі, насолоджуючись видом на море. Квартира розміром 24 метри з повністю обладнаною кухнею з мікрохвильовою пічю, вітальнею , телевізором з плоским екраном, власною ванною кімнатою з пральною машиною, феном. Є холодильник, плита, чайник. Спальне місце - двоспальне ліжко. На території комплексу розташовані магазин, аптека, кав 'ярня та інші сервіси, поруч...</p>
-	                <a href="###" class="bolderT">Показати більше</a>
+	                <a href="###" class="bolderT colorDarkA">Показати більше</a>
             	</div>
 
             	<hr>
@@ -696,6 +696,13 @@
 	            day.classList.add('selected');
 	        });
 	    });
+	const bookingButtons = document.querySelectorAll('.smallBtn, .book_btn');
+
+	bookingButtons.forEach(btn => {
+	    btn.addEventListener('click', () => {
+	        window.location.href = 'reservation.html'; 
+	    });
+	});
 	</script>
 
 </body>
